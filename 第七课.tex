@@ -1,0 +1,208 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{geometry} %设置边距，符合Word设定
+\geometry{a4paper, top=2.5cm, bottom=2.5cm, left=2.5cm, right=2.5cm}
+\usepackage{amsmath} %数学公式排版
+\usepackage{lmodern} %使用Latin Modern字体
+\usepackage{multirow} %单元格合并
+\usepackage{makecell} %优化单元格显示
+\usepackage{tabularx} %Latex的表格
+\usepackage{xeCJK} %排版中日韩（CJK）文字
+\usepackage{fontspec} %提供了一个自动和统一的接口来加载字体，\setmainfont用于设置主字体
+\usepackage{ctex} %中文支持
+
+\setmainfont{Times New Roman}
+
+% 导言区
+\title{\heiti\zihao{2} 实验：$ KMnO_4$法测定硫酸亚铁铵中$ Fe^{2+}$的含量}
+\author{专业名称\quad 姓\;名\quad 学号xxxxxxxxxxxxxx}
+\date{20xx年xx月xx日}
+
+%设置小四号字号，字号为12pt，行距为18pt
+\renewcommand{\normalsize}{\fontsize{12pt}{18pt}\selectfont}
+%文件开始
+\begin{document}
+
+\maketitle
+
+\setcounter{section}{0}
+\section*{一、实验原理与操作方法}
+\subsection*{（一）实验原理}
+在稀硫酸$H_2SO_4$中，$KMnO_4$能够定量地将$Fe^{2+}$氧化成$Fe^{3+}$，而自身被还原为$Mn^{2+}$，
+因此可以用$KMnO_4$标准溶液滴定和测量出硫酸亚铁铵产品中的$Fe^{2+}$含量，反应的化学反应式为：
+$$
+MnO_4^-+5Fe^{2+}+8H^+=Mn^{2+}+5Fe^{3+}+4H_2O
+$$
+
+由于$KMnO_4$溶液不够稳定，所以需要使用基准物溶液如$Na_2C_2O_4$溶液等来标定$KMnO_4$溶液，从而得到$KMnO_4$溶液的浓度，其化学反应式为：
+$$
+ 2MnO_4^-+5C_2O_4^{2-}+16H^+=2Mn^{2+}+10CO_2\uparrow+8H_2O
+$$
+
+$ KMnO_4$在不同的pH条件下均能将$ Fe^{2+}$氧化成$ Fe^{3+}$，但是自身不一定会被还原为$ Mn^{2+}$。
+其还原产物，在酸性条件下为$ Mn^{2+}$，在弱酸性和中性条件下为$ MnO_2$，在碱性条件下为$ MnO_4^{2-}$，因此需要保证溶液为酸性。
+但过酸会促进草酸$ H_2C_2O_4$的分解。综合来看，需要控制酸浓度在0.5-1mol/L之间。加入$ 5mL(1+3)H_2SO_4$可以满足条件。
+
+$ KMnO_4$和$ Na_2C_2O_4$在常温下反应缓慢，并不适用于滴定的要求，因而需要升温来加快反应速率。
+考虑到过高温度会促进$ H_2C_2O_4$的分解，所以将温度控制在$ 70\sim 80^{\circ}C$，能够满足滴定的需求而不会使得$ H_2C_2O_4$分解过快。
+另外，反应生成的$ Mn^{2+}$可以催化该反应的进行，所以在滴定开始时速度较慢，随着溶液中的$ Mn^{2+}$逐步积累，滴定的速度可以随之加快，直至到达正常速度。
+
+本实验分为标定和测定两个部分，均是用$ KMnO_4$溶液作滴定剂，因$ KMnO_4$具有颜色，则以微过量的高锰酸钾的自身粉红色来指示终点，半分钟不褪色即为滴定终点。
+
+\subsection*{（二）操作方法}
+(1)取$ 30mL \; 0.02 mol\cdot L^{-1} KMnO4$溶液，在玻璃试剂瓶中稀释至约$ 300 mL$。
+
+(2)采用减量法准确称取$ 0.16\sim 0.17 g Na_2C_2O_4$基准物于$ 150 mL$烧杯中，加入约$ 50 mL$纯水使之溶解，转移至$ 250 mL$容量瓶中，用纯水定容至刻度。
+
+(3)用移液管移取$ 25.00 mL$的$ Na_2C_2O_4$标准溶液于锥形瓶中，加$ 5 mL(1+3)H_2SO_4$溶液及$ 20 mL$去离子水，
+摇匀后置于电热板加热约$ 3 min$，至温度约为$ 70\sim 80^{\circ}C$，取回趁热用$ KMnO_4$溶液滴定至微红色。平行测定三次。
+
+(4)用电子分析天平准确称取$ 0.35\sim 0.40 g$ 硫酸亚铁铵试样一份于$ 150 mL $烧杯中，加入去离子水溶解后转移到$ 100.0 mL$容量瓶，用纯水定容至刻度。
+
+(5)移液管平行移取三份$ 25.00 mL$试液于锥形瓶中，分别加入$ 5mL(1+3)H_2SO_4$溶液及$ 20 mL$去离子水，
+摇匀后立即用$ KMnO_4$溶液滴定至微红色，半分钟内不褪色为终点，记录实验数据。
+
+\subsection*{（三）实验中待记录的数据}
+配制$ Na_2C_2O_4$标准溶液的定容体积$V$、所用$ Na_2C_2O_4$的质量$m$，标定$ KMnO_4$浓度时消耗的$ KMnO_4$溶液的体积，
+配置硫酸亚铁铵试液的定容体积、所用的样品质量，测定试液中$ Fe^{2+}$时所消耗的$ KMnO_4$溶液的体积。
+
+\subsection*{（四）化学反应方程式}
+本实验涉及两个化学反应，方程式如下：
+$$
+MnO_4^-+5Fe^{2+}+8H^+=Mn^{2+}+5Fe^{3+}+4H_2O
+$$$$
+2MnO_4^-+5C_2O_4^{2-}+16H^+=2Mn^{2+}+10CO_2\uparrow+8H_2O
+$$
+
+\subsection*{（五）测定、标定的计算式}
+
+对$ KMnO_4$溶液标定时，由化学反应方程式可以得到以下计算式：
+$$
+\frac{C(KMnO_4)\cdot V(KMnO_4)}{C(Na_2C_2O_4)\cdot V(Na_2C_2O_4)}=\frac{2}{5}
+\ ;\
+C(Na_2C_2O_4) = \frac{m(Na_2C_2O_4)}{M(Na_2C_2O_4)\cdot 250mL}
+$$$$
+\overline{C}(KMnO_4)=\frac{1}{3}\sum C(KMnO_4)
+$$
+代入相关数据，这可以得到$ KMnO_4$溶液的浓度$ C(KMnO_4)$。
+
+使用标准$ KMnO_4$溶液测定样液中的$ Fe^{2+}$含量时，由化学反应方程式有：
+$$
+\frac{C(KMnO_4)\times V(KMnO_4)}{n(Fe^{2+})}=\frac{1}{5}
+$$
+
+这里的$ V(KMnO_4)$不是标定时的$ V(KMnO_4)$，是测定步骤的得到数据；
+$n(Fe^{2+})$指的是硫酸亚铁铵试样溶液（锥形瓶中的25mL样液）中$ Fe^{2+}$的物质的量，对于其，又有：
+$$
+n(Fe^{2+})\cdot M(FeSO_4\cdot (NH_4)_2SO_4\cdot 6H_2O)=\frac{25mL}{100mL} \cdot m(\text{试样})\cdot \omega(FeSO_4\cdot (NH_4)_2SO_4\cdot 6H_2O)
+$$$$
+\overline{\omega}(FeSO_4\cdot (NH_4)_2SO_4\cdot 6H_2O)=\frac{1}{3}\omega(FeSO_4\cdot (NH_4)_2SO_4\cdot 6H_2O)
+$$
+
+在上面的式子中代入数据，可以求得样品中硫酸亚铁铵的含量。
+
+
+\section*{二、结果与讨论}
+
+\renewcommand\arraystretch{1}
+\fontsize{10pt}{12pt}\selectfont
+\begin{tabularx}{13cm}{|p{0.5cm}|p{5cm}|p{2.5cm}|p{2.5cm}|p{2.5cm}|}
+  \cline{1-5}
+  \multirow{10}{*}{\makecell{标\\ \\ \\ \\ \\定}}
+    & \multicolumn{1}{c|}{\multirow{2}{*}{基准物名称}}
+      & \multicolumn{3}{c|}{草酸钠($ Na_2C_2O_4$)}\\
+      \cline{3-5}
+    & & \makecell{I} & \makecell{II} & \makecell{III}\\
+    \cline{2-5}
+    & \multicolumn{1}{c|}{基准物质量（g）} & \multicolumn{3}{c|}{0.1659}\\
+    \cline{2-5}
+    & \multicolumn{1}{c|}{定容体积（mL）} & \multicolumn{3}{c|}{250.0}\\
+    \cline{2-5}
+    & \multicolumn{1}{c|}{滴定体积（mL）} & \makecell{24.48} & \makecell{25.12} & \makecell{24.48}\\
+    \cline{2-5}
+    & \multicolumn{1}{c|}{全距（mL）} & \multicolumn{3}{c|}{0.64}\\
+    \cline{2-5}
+    & \multicolumn{1}{c|}{标准溶液浓度（$ mol\cdot L^{-1}$）} & \makecell{$ 2.023\times 10^{-3}$} & \makecell{$ 1.971\times 10^{-3}$} & \makecell{$ 2.023\times 10^{-3}$}\\
+    \cline{2-5}
+    & \multicolumn{1}{c|}{浓度平均值（$ mol\cdot L^{-1}$）} & \multicolumn{3}{c|}{$ 2.006\times 10^{-3}$}\\
+    \cline{2-5}
+    & \multicolumn{1}{c|}{相对偏差（\%）} & \makecell{0.9} & \makecell{-1.8} & \makecell{0.9}\\
+    \cline{2-5}
+    & \multicolumn{1}{c|}{平均相对偏差（\%）} & \multicolumn{3}{c|}{1.2}\\
+  \cline{1-5}
+  \multirow{10}{*}{\makecell{测\\ \\ \\ \\ \\定}}
+    & \multicolumn{1}{c|}{\multirow{2}{*}{样品名称}}
+      & \multicolumn{3}{c|}{硫酸亚铁铵($ FeSO_4\cdot (NH_4)_2SO_4\cdot 6H_2O$)}\\
+      \cline{3-5}
+    & & \makecell{I} & \makecell{II} & \makecell{III}\\
+    \cline{2-5}
+    & \multicolumn{1}{c|}{样品质量（g）} & \multicolumn{3}{c|}{0.3809}\\
+    \cline{2-5}
+    & \multicolumn{1}{c|}{定容体积（mL）} & \multicolumn{3}{c|}{100.0}\\
+    \cline{2-5}
+    & \multicolumn{1}{c|}{滴定体积（mL）} & \makecell{22.70} & \makecell{22.72} & \makecell{22.71}\\
+    \cline{2-5}
+    & \multicolumn{1}{c|}{全距（mL）} & \multicolumn{3}{c|}{0.02}\\
+    \cline{2-5}
+    & \multicolumn{1}{c|}{样品含量（\%）} & \makecell{93.76} & \makecell{93.84} & \makecell{93.80}\\
+    \cline{2-5}
+    & \multicolumn{1}{c|}{样品平均含量（\%）} & \multicolumn{3}{c|}{93.80}\\
+    \cline{2-5}
+    & \multicolumn{1}{c|}{相对偏差（\%）} & \makecell{-0.04} & \makecell{0.04} & \makecell{0}\\
+    \cline{2-5}
+    & \multicolumn{1}{c|}{平均相对偏差（\%）} & \multicolumn{3}{c|}{0.03}\\
+    \cline{2-5}
+  \cline{1-5}
+\end{tabularx}
+
+\bigskip
+\normalsize
+
+若取样本平均含量代表样品中硫酸亚铁铵的含量，那么，样品中$ Fe^{2+}$的质量分数为
+$$
+\omega(Fe^{2+})=\frac{M(Fe^{2+})}{M(FeSO_4\cdot (NH_4)_2SO_4\cdot 6H_2O)}\cdot \overline{\omega}(FeSO_4\cdot (NH_4)_2SO_4\cdot 6H_2O)
+$$
+可以得到$\omega(Fe^{2+})=13.36\%$，$ \omega(FeSO_4\cdot (NH_4)_2SO_4\cdot 6H_2O)=93.80\%$。
+
+\section*{三、实验分析与总结}
+\subsection*{（一）、实验分析}
+本实验分为标定和测定两个部分，每个部分有3次滴定操作，实验一共需要进行6次滴定操作。其中，在标定$ KMnO_4$溶液时，需要先慢后快。
+
+但是，在标定过程中中发现，有的滴定在开始时就能迅速褪色，而且最终的高锰酸钾溶液用量大于其他组。考虑到上个实验使用了铁粉，在转移铁粉的时候也许会有少量残留在锥形瓶内壁上，
+于是猜测可能是残留的铁粉与高锰酸钾发生反应，使得其用量偏大，而产生的铁离子可以催化高锰酸钾与草酸根的反应，使得滴定开始时褪色较快。
+
+标定高锰酸钾溶液浓度时需要对溶液进行加热以提高滴定开始时的反应速度，虽然可以控制温度，但这一操作仍可能导致草酸的分解，最终会导致计算得出的样品含量偏小。
+
+在测定样品含量时，由于样品被密封在塑料袋中，可能含水较多，会导致计算得出的样品含量偏小。若对样液进行加热，可能会导致部分$ Fe^{2+}$被氧化，产生误差。
+
+\subsection*{（二）、实验改进}
+(1)在实验开始前彻底清洗实验器材，防止上一次的实验残留物干扰实验。
+
+(2)在标定时，向锥形瓶中加入少量$ MnCl_2$，而不是加热草酸钠溶液，可以尽量减少草酸的分解。
+
+(3)在称量样品之前，使用乙醇清洗样品，而后晾干，用以去除样品中的水分。
+
+(4)测定样品含量时，避免对溶液进行加热，防止$ Fe^{2+}$被氧化而产生误差。
+
+
+
+\section*{四、思考题}
+
+(1)制备硫酸亚铁铵时，在蒸发、浓缩过程中，若发现溶液变黄，是什么原因？应如何处理？
+
+若发现溶液变黄，这是因为操作不当导致$ Fe^{2+}$被氧化为$ Fe^{3+}$，使得溶液显示出$ Fe^{3+}$的颜色，即黄色；
+此时应当重做实验，并在新一次实验中严格按步骤操作，避免氧化，或者加入还原剂，比如维生素C等，再或者加入过量铁粉，将$ Fe^{3+}$还原为$ Fe^{2+}$。
+
+(2)干燥硫酸亚铁铵晶体时应注意哪些问题？
+
+干燥晶体时，需要保证通风，并将晶体平摊，增大表面积，便于水分和乙醇的挥发。不能把晶体放在水浴锅上加热干燥，加热晶体可能会导致晶体中的$ Fe^{2+}$被氧化，应当在室温下干燥晶体。
+
+(3)以$ Na_2C_2O_4$为基准物标定$ KMnO_4$溶液的浓度时应注意哪些反应条件？
+
+需要注意“三度”即温度、酸度、滴定速率以及滴定终点的判断。试液温度控制$ 70\sim 80^{\circ}C$之间；用硫酸调节酸度，控制酸的浓度为$ 0.5\sim 1mol\cdot L^{-1}$；
+开始滴定阶段滴定速率应很慢，减少热分解，后续有了$ Mn^{2+}$催化后，可逐渐加快直至正常速率；
+滴定终点不稳定，空气中的还原性物质等能使$ KMnO_4$褪色，所以滴到试液呈微红色且半分钟内不褪色即可认为终点已到。
+
+%\bibliographystyle{IEEEtran}
+%\bibliography{data}
+
+\end{document}

@@ -1,0 +1,176 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{geometry}%设置边距，符合Word设定
+\geometry{a4paper, top=2.5cm, bottom=2.5cm, left=2.5cm, right=2.5cm}
+\usepackage{amsmath} %数学公式排版
+\usepackage{lmodern} %使用Latin Modern字体
+\usepackage{multirow} %单元格合并
+\usepackage{makecell} %优化单元格显示
+\usepackage{tabularx} %Latex的表格
+\usepackage{xeCJK} %排版中日韩（CJK）文字
+\usepackage{fontspec} %提供了一个自动和统一的接口来加载字体，\setmainfont用于设置主字体
+\usepackage{ctex} %中文支持
+
+\setmainfont{Times New Roman}
+
+% 导言区
+\title{\heiti\zihao{2} 实验：滴定分析基本操作练习}
+\author{专业名称\quad 姓\;名\quad 学号xxxxxxxxxxxxxx}
+\date{20xx年xx月xx日}
+
+% 设置小四号字号，字号为12pt，行距为18pt
+\renewcommand{\normalsize}{\fontsize{12pt}{18pt}\selectfont}
+
+%文件开始
+\begin{document}
+
+\maketitle
+
+\setcounter{section}{0}
+\section*{一、实验原理与操作方法}
+\subsection*{（一）实验原理}
+本实验采用酸碱滴定法，以酸碱反应为基础。水溶液中的酸碱反应是中和反应，其离子方程式为：
+$$
+\rm
+H_{3}O^++OH^-=2H_2O
+\quad ; \quad
+H_{3}O^++A^-=HA+H_2O
+$$
+酸碱中和反应的当等点pH=7.00，在该点附近，微量的酸或碱就可以导致溶液pH的突变（即：滴定突越）。
+于是，若使用变色范围处于滴定突跃范围内的酸碱指示剂，就可以在滴定终点附近见到由于pH突变导致的溶液颜色变化。
+
+\subsection*{（二）操作方法}
+(1)准备器材：准备好一支聚四氟乙烯滴定管、三个锥形瓶、两个烧杯、一支移液管，还有用于盛装NaOH溶液和HCl溶液的瓶子；
+
+(2)溶液配制：各取25mL浓度均为2mol/L的NaOH溶液和HCl溶液，加水稀释至500mL，盖上盖子备用；
+
+(3)仪器清洗：用自来水清洗滴定管，然后用纯水润洗滴定管3次，再用待加入液体（比如配置好的NaOH溶液）润洗3次，搁置备用；
+之后对移液管进行如上操作，但是使用另一种溶液（比如配置好的HCl溶液）润洗；
+
+(4)加注溶液：将对应于滴定管的溶液（比如配置好的NaOH溶液）加注进滴定管，排除气泡并将液面调零；用移液管移取3次另一种溶液至3个锥形瓶中，
+加入酸碱指示剂（这里使用酚酞）；
+
+(5)滴定：用滴定管滴加溶液，直至最后半滴落下锥形瓶内溶液恰好变色，垂放滴定管，记录此时滴定管内的液面；
+
+(6)重复操作：换用另一个锥形瓶，向滴定管中注入溶液并调零之后继续滴定，
+3次结束之后，对滴定管、移液管、锥形瓶清洗，并对前两者用纯水润洗，更换溶液后用对应的溶液润洗，更换指示剂（这里换用甲基橙），继续滴定。
+
+\subsection*{（三）实验中测定或标定的数据}
+(1)NaOH溶液滴定HCl溶液：HCl溶液的体积${\rm V_{HCl}(mL)}$；
+滴定所消耗的NaOH溶液的体积${\rm V_{NaOH}(mL)}$。
+
+(2)HCl溶液滴定NaOH溶液：NaOH溶液的体积${\rm V_{NaOH}(mL)}$；
+滴定所消耗的HCl溶液的体积${\rm V_{HCl}(mL)}$。
+
+\subsection*{（四）反应方程式}
+$$
+\rm
+H_{3}O^++OH^-=2H_2O
+\quad ; \quad
+H_{3}O^++A^-=HA+H_2O
+$$
+
+\section*{二、结果与讨论}
+
+\subsection*{表1.NaOH溶液滴定HCl溶液（指示剂：酚酞）}
+
+\renewcommand\arraystretch{1.5}
+
+\begin{tabularx}{13cm}{|p{4cm}|p{3cm}|p{3cm}|p{3cm}|}
+    \cline{1-4}
+    \makecell{记录与计算\\} & \makecell{1} &  \makecell{2} &  \makecell{3} \\
+    \cline{1-4}
+    \makecell{$\rm V_{HCl}(mL)$\\} & \makecell{25.00} & \makecell{25.00} & \makecell{25.00} \\ 
+    \cline{1-4}
+    \makecell{$\rm V_{NaOH}(mL)$\\} & \makecell{21.05} & \makecell{21.00} & \makecell{21.02} \\ 
+    \cline{1-4}
+    \makecell{$\rm \overline{V}_{NaOH}(mL)$\\} & \multicolumn{3}{|c|}{21.02} \\ 
+    \cline{1-4}
+    \makecell{全距 (mL)\\} & \multicolumn{3}{|c|}{0.05} \\ 
+    \cline{1-4}
+    \makecell{${\rm V_{HCl}(mL)}$\\$\rm \overline{{\overline{V}_{NaOH}(mL)}}$} & \multicolumn{3}{|c|}{1.189} \\ 
+    \cline{1-4}
+    \makecell{$\rm \text{相对偏差}d$\\} & \makecell{0.14\%} & \makecell{-0.10\%} & \makecell{0.00\%}\\
+    \cline{1-4}
+    \makecell{$\rm \text{平均相对偏差}\overline{d}$\\} & \multicolumn{3}{|c|}{0.08\%}\\
+    \cline{1-4}
+\end{tabularx}
+
+\subsection*{表2.HCl溶液滴定NaOH溶液（指示剂：甲基橙）}
+    
+\begin{tabularx}{13cm}{|p{4cm}|p{3cm}|p{3cm}|p{3cm}|}
+    \cline{1-4}
+    \makecell{记录与计算\\} & \makecell{1} &  \makecell{2} &  \makecell{3} \\ 
+    \cline{1-4}
+    \makecell{$\rm V_{NaOH}(mL)$\\} & \makecell{25.00} & \makecell{25.00} & \makecell{25.00} \\ 
+    \cline{1-4}
+    \makecell{$\rm V_{HCl}(mL)$\\} & \makecell{29.72} & \makecell{29.75} & \makecell{29.70} \\ 
+    \cline{1-4}
+    \makecell{$\rm \overline{V}_{HCl}(mL)$\\} & \multicolumn{3}{|c|}{29.72} \\ 
+    \cline{1-4}
+    \makecell{全距 (mL)\\} & \multicolumn{3}{|c|}{0.05} \\ 
+    \cline{1-4}
+    \makecell{$\rm \underline{{V_{NaOH}(mL)}}$\\${\rm \overline{V}_{HCl}(mL)}$} & \multicolumn{3}{|c|}{0.9242} \\ 
+    \cline{1-4}
+    \makecell{$\rm \text{相对偏差}d$\\} & \makecell{0.00\%} & \makecell{-0.10\%} & \makecell{0.07\%}\\
+    \cline{1-4}
+    \makecell{$\rm \text{平均相对偏差}\overline{d}$\\} & \multicolumn{3}{|c|}{0.06\%}\\
+    \cline{1-4}
+\end{tabularx}
+
+\bigskip
+对于HCl溶液滴定NaOH溶液：
+$$
+\rm \overline{V}_{HCl}=\frac{1}{3}\sum V_{HCl}=\frac{1}{3}(29.72+29.75+29.70)mL=29.72 mL
+$$$$
+\rm \text{全距}=29.75mL-29.70mL=0.05mL
+$$$$
+\rm {{V_{NaOH}}}/{\rm \overline{V}_{HCl}}=25.00/29.72=0.9242
+$$$$
+\rm d=\frac{V_{HCl}-\overline{V}_{HCl}}{\overline{V}_{HCl}}=\frac{29.72-29.72}{29.72}=0.00\%
+$$$$
+\rm \overline{d}=\frac{1}{3}\sum \lvert d\rvert 
+=\frac{1}{3}(\lvert 0.00\%\rvert + \lvert -0.10\%\rvert + \lvert 0.07\%\rvert)=0.06\%
+$$
+
+对于该组其他相对偏差的计算，以及NaOH溶液滴定HCl溶液实验中的数据处理，参考上面，同理可得。
+
+\section*{三、实验分析与总结}
+\subsection*{（一）实验分析}
+本实验是化学中的经典定量分析实验，通过该实验，我们能够充分了解化学实验的魅力。
+在操作规范的前提下，误差较小。但是因为操作不规范、读书出现偏差、细节被疏漏等问题，实验仍有改进之处。
+\subsection*{（二）实验改进}
+(1)在量取25mL浓度均为2mol/L的NaOH溶液和HCl溶液时，应当使用测量仪器（如：吸量管等）进行较为精确地量取；
+
+(2)稀释溶液时，需要选择带有刻度线的大容量容器进行稀释，保证稀释过程的准确；
+
+(3)在进行滴定操作时，应当戴上口罩或在通风橱中操作，避免口中呼出气体里的${\rm CO_2}$与NaOH反应，尤其是临近反应终点时；
+
+(4)在滴定剂滴入时滴定剂滴入处变色，但是摇晃之后褪色，就表明即将到达滴定终点，此时需要缓慢滴加滴定剂甚至半滴半滴加入溶液。
+
+(5)甲基红的变色范围更加靠近pH=7.00，也许在HCl溶液滴定NaOH溶液时，可以考虑使用甲基红。
+
+\section*{四、思考题}
+1、配置NaOH溶液时，应用何种天平称取试剂？为什么？
+
+答：配置NaOH溶液时，应使用精确位数不至于过高的带托盘的天平，比如电子天平等，因为NaOH具有腐蚀性和吸湿性，
+要求天平需要拥有托盘，如果精确位数过高，会导致无法读数。
+
+2、在滴定分析中，滴定管为何要用滴定剂润洗几次？滴定中的锥形瓶是否也要用滴定剂润洗呢？为什么？
+
+答：因为在用纯水润洗之后，滴定管上残留的水珠会降低后续进入滴定管内滴定剂的浓度，引起误差；
+但是滴定用的锥形瓶不需要被滴定剂润洗，因为移液管加入的滴定剂的量是一定的，这就能够保证锥形瓶中溶质的量无误，其浓度变化对实验没有影响。
+
+3、为了得到${\rm 0.1mol\cdot L^{-1}}$的HCl标准溶液，量取浓盐酸时应使用吸量管还是量筒，为什么？
+
+答：应当使用吸量管，因为量筒的直径偏大，浓盐酸更易挥发，产生更大的误差，而吸量管开口较小。
+
+4、通常情况下，如何清洗滴定管？
+
+答：先将滴定管内的溶液放干净，再将滴定管取下，用清水清洗，用手封住开口，摇晃滴定管，使其流经管的内壁，以去除残留的液体；
+可添加洗洁精等，让其在管内停留一段时间之后，用流水彻底冲洗滴定管，保证洗涤剂被全部冲出。
+
+5、用待装入滴定管中的溶液润洗滴定管时，通常需洗几次？每次用量多少？
+
+答：通常需要洗三次，每次需要使用大约10mL的待装入溶液。
+
+\end{document}

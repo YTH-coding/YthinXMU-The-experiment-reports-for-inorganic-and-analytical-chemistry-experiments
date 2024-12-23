@@ -1,0 +1,259 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{geometry} %设置边距，符合Word设定
+\geometry{a4paper, top=2.5cm, bottom=2.5cm, left=2.5cm, right=2.5cm}
+\usepackage{amsmath} %数学公式排版
+\usepackage{lmodern} %使用Latin Modern字体
+\usepackage{multirow} %单元格合并
+\usepackage{makecell} %优化单元格显示
+\usepackage{tabularx} %Latex的表格
+\usepackage{xeCJK} %排版中日韩（CJK）文字
+\usepackage{fontspec} %提供了一个自动和统一的接口来加载字体，\setmainfont用于设置主字体
+\usepackage{ctex} %中文支持
+\usepackage{cite} %文献引用
+\usepackage{pgfplots} %绘制散点图等图像
+\pgfplotsset{compat=1.16}
+\usepackage[version=4]{mhchem} %排版化学公式和方程式
+\usepackage{chemfig} %排版化学结构式
+\setchemfig{atom sep=2em}
+\usepackage{xcolor} %在文档中为文字等添加颜色
+
+\setmainfont{Times New Roman}
+
+% 导言区
+\title{\heiti\zihao{2} 实验：电离常数和电离度的测定}
+\author{专业名称\quad 姓\;名\quad 学号xxxxxxxxxxxxxx}
+\date{20xx年xx月xx日}
+
+%设置小四号字号，字号为12pt，行距为18pt
+\renewcommand{\normalsize}{\fontsize{12pt}{18pt}\selectfont}
+%文件开始
+\begin{document}
+
+\maketitle
+
+\setcounter{section}{0}
+\section*{一、实验原理与操作方法}
+\subsection*{（一）实验原理}
+乙酸（$\rm CH_3COOH$或HAc）是弱电解质，在水溶液中存在下列电离平衡：
+$$
+\ce{HAc <=> H^+ + Ac^-}
+$$
+$$
+K_a=\frac{[H^+][Ac^-]}{[HAc]}\quad,\quad \alpha = \frac{[H^+]}{c}
+$$
+式中：$\rm [H^+]$、$\rm [Ac^-]$和$\rm [HAc]$分别为$\rm H^+$、$\rm Ac^-$和$\rm HAc$的平衡浓度，$K_a$是电离平衡常数，$\alpha$是电离度。
+
+HAc溶液的总浓度c可以使用NaOH标准溶液滴定测得；由电离平衡式，可知$\rm H^+$和$\rm Ac^-$的平衡浓度相等，使用pH计测量溶液的pH，再根据$\rm pH=-lg[H^+]$就可以得到平衡浓度；
+另外，[HAc]=c-$\rm [H^+]$，带入公式可以计算得到该温度下的$\rm K_a$和$\alpha$。
+
+\subsection*{（二）操作方法}
+(1)使用分析天平取三份邻苯二甲酸氢钾（$\rm KHC_8H_4O_4$）固体于锥形瓶中，质量区间为$\rm 0.4\sim0.6g$，加入$\rm 40\sim60ml$纯水使其溶解，并加入$\rm 2\sim3$滴酚酞指示剂；
+
+(2)取15ml的NaOH溶液，稀释至约300mL，用该溶液滴定锥形瓶中的$\rm KHC_8H_4O_4$溶液，使其变为微红色，并且保持半分钟不褪色（滴定三次）；
+
+(3)根据$\rm KHC_8H_4O_4$的质量和消耗NaOH溶液的体积计算NaOH溶液的浓度、相对偏差、平均相对偏差；
+
+(4)取25mL的HAc溶液置于锥形瓶中，滴加酚酞指示剂之后用标定好的NaOH溶液进行滴定，计算得出HAc溶液的浓度、相对偏差、平均相对偏差（滴定三次）；
+
+(5)分别取5mL、10mL、25mL已标定浓度的HAc溶液于三个不同的50mL容量瓶中，定容至刻度线处，此时可以得到四种不同浓度的HAc溶液；
+
+(6)用标准缓冲溶液校准pH计，将上述的四种不同浓度的HAc溶液注入50mL的小烧杯中，然后用校准后的pH计由稀到浓依次测量它们的pH值，并记录温度。
+
+\subsection*{（三）实验中待记录的数据}
+$\rm KHC_8H_4O_4$的质量、标定NaOH时所消耗的NaOH溶液的体积、标定HAc时所消耗的NaOH溶液的体积、4种不同浓度HAc溶液的pH值、测量pH时的温度。
+
+\subsection*{（四）化学反应方程式}
+$$
+\rm\chemfig{*6(-=(-[7]COOH)-(-[1]COOK)=-=)}+NaOH=\chemfig{*6(-=(-[7]COONa)-(-[1]COOK)=-=)}+H_2O
+$$
+
+$$
+\ce{HAc <=> H^+ + Ac^-}
+$$
+
+\section*{二、结果与讨论}
+
+\subsubsection*{表1：NaOH溶液标定及HAc溶液浓度测定数据表}
+\renewcommand\arraystretch{1}
+\fontsize{10pt}{12pt}\selectfont
+\noindent
+\begin{tabularx}{13cm}{|p{0.5cm}|p{5cm}|p{1.8cm}|p{1.9cm}|p{1.9cm}|p{1.9cm}|}
+    \cline{1-6}
+    \multirow{8}{*}{\makecell{标\\ \\ \\定}}
+        & \multicolumn{2}{c|}{编号} & \makecell{1} & \makecell{2} & \makecell{3}\\
+        \cline{2-6}
+        & \multicolumn{2}{c|}{基准物邻苯二甲酸氢钾质量m/g} & \makecell{0.5163} & \makecell{0.4311} & \makecell{0.5236}\\
+        \cline{2-6}
+        & \multicolumn{2}{c|}{所用NaOH溶液体积V/mL} & \makecell{23.82} & \makecell{19.92} & \makecell{24.18}\\
+        \cline{2-6}
+        & \multicolumn{2}{c|}{全距/mL} & \multicolumn{3}{c|}{0.36} \\
+        \cline{2-6}
+        & \multirow{2}{*}{\makecell{\ \ \ \ NaOH溶液浓度$\rm C/mol\cdot L^{-1}$\\}}
+            & \makecell{测定值} & \makecell{0.1061} & \makecell{0.1060} & \makecell{0.1060}\\
+            \cline{3-6}
+            & & \makecell{平均值} & \multicolumn{3}{c|}{0.1060}\\
+        \cline{2-6}
+        & \multicolumn{2}{c|}{NaOH溶液浓度测定值的相对偏差} & \makecell{$\rm 0.09\%$} & \makecell{0} & \makecell{0}\\
+        \cline{2-6}
+        & \multicolumn{2}{c|}{NaOH溶液浓度测定值的平均相对偏差} & \multicolumn{3}{c|}{$\rm 0.03\%$}\\
+    \cline{1-6}
+    \multirow{7}{*}{\makecell{测\\ \\ \\定}}
+        & \multicolumn{2}{c|}{所取HAc溶液体积V/mL} & \makecell{25.00} & \makecell{25.00} & \makecell{25.00}\\
+        \cline{2-6}
+        & \multicolumn{2}{c|}{所用NaOH溶液体积V/mL} & \makecell{32.90} & \makecell{32.95} & \makecell{33.00}\\
+        \cline{2-6}
+        & \multicolumn{2}{c|}{全距/mL} & \multicolumn{3}{c|}{0.10} \\
+        \cline{2-6}
+        & \multirow{2}{*}{\makecell{\ \ \ \ HAc溶液浓度$\rm C/mol\cdot L^{-1}$\\}}
+            & \makecell{测定值} & \makecell{0.1395} & \makecell{0.1397} & \makecell{0.1399}\\
+            \cline{3-6}
+            & & \makecell{平均值} & \multicolumn{3}{c|}{0.1397}\\
+        \cline{2-6}
+        & \multicolumn{2}{c|}{HAc溶液浓度测定值的相对偏差} & \makecell{$\rm -0.15\%$} & \makecell{0} & \makecell{$\rm 0.15\%$}\\
+        \cline{2-6}
+        & \multicolumn{2}{c|}{HAc溶液浓度测定值的平均相对偏差} & \multicolumn{3}{c|}{$\rm 0.10\%$}\\
+    \cline{1-6}
+\end{tabularx}
+
+\bigskip
+\normalsize
+
+\subsubsection*{表2：测定醋酸电离度和电离常数的数据及处理（温度：$\rm 23.0^{\circ}C$）}
+\renewcommand\arraystretch{1.2}
+\noindent
+\fontsize{10pt}{12pt}\selectfont
+\begin{tabularx}{13.05cm}{|p{0.75cm}|p{1.6cm}|p{2cm}|p{2.4cm}|p{1cm}|p{2.3cm}|p{2cm}|p{1cm}|}
+    \cline{1-8}
+    \makecell{编号} & \makecell{$\rm V_{HAc}/mL$} & \makecell{定容体积/mL} & \makecell{$\rm C_{HAc}/mol\cdot L^{-1}$} & \makecell{pH} & \makecell{$\rm [H^+]/mol\cdot L^{-1}$} & \makecell{$\rm K_a$} & \makecell{$\alpha$}\\
+    \cline{1-8}
+    \makecell{1} & \makecell{5.00} & \makecell{50.00} & \makecell{0.01397} & \makecell{3.33} & \makecell{$4.7\times 10^{-4}$} & \makecell{$1.6\times 10^{-5}$} & \makecell{$3.4\%$}\\
+    \cline{1-8}
+    \makecell{2} & \makecell{10.00} & \makecell{50.00} & \makecell{0.02794} & \makecell{3.15} & \makecell{$7.1\times 10^{-4}$} & \makecell{$1.8\times 10^{-5}$} & \makecell{$2.4\%$}\\
+    \cline{1-8}
+    \makecell{3} & \makecell{25.00} & \makecell{50.00} & \makecell{0.06985} & \makecell{2.92} & \makecell{$1.2\times 10^{-3}$} & \makecell{$2.1\times 10^{-5}$} & \makecell{$1.7\%$}\\
+    \cline{1-8}
+    \makecell{4} & \makecell{50.00} & \makecell{------} & \makecell{0.1397} & \makecell{2.78} & \makecell{$1.7\times 10^{-3}$} & \makecell{$2.0\times 10^{-5}$} & \makecell{$1.2\%$}\\
+    \cline{1-8}
+\end{tabularx}
+
+\bigskip
+
+\normalsize
+经过计算，$\rm 23.0^{\circ}C$下醋酸的电离平衡常数$\rm K_a$的平均值为：$1.9\times 10^{-5}$，与文献值符合程度较好。
+
+若以298K时的电离平衡常数\textsuperscript{\cite{B1}}为基准（在该温度附近，$K_a$随温度的变化不大\textsuperscript{\cite{JJSZ198706006}}），四种浓度下电离平衡常数测定值的相对偏差、平均相对偏差、相对误差、平均相对误差如下表：
+
+\medskip
+\fontsize{10pt}{12pt}\selectfont
+\renewcommand\arraystretch{1.2}
+\begin{tabularx}{12.3cm}{|p{3.5cm}|p{2.2cm}|p{2.2cm}|p{2.2cm}|p{2.2cm}|}
+    \cline{1-5}
+    \makecell{编号} & \makecell{1} & \makecell{2} & \makecell{3} & \makecell{4}\\
+    \cline{1-5}
+    \makecell{$\rm C_{HAc}/mol\cdot L^{-1}$} & \makecell{0.01397} & \makecell{0.02794} & \makecell{0.06985} & \makecell{0.1397}\\
+    \cline{1-5}
+    \makecell{$K_a$} & \makecell{$1.6\times 10^{-5}$} & \makecell{$1.8\times 10^{-5}$} & \makecell{$2.1\times 10^{-5}$} & \makecell{$2.0\times 10^{-5}$}\\
+    \cline{1-5}
+    \makecell{$K_a$平均值} & \multicolumn{4}{c|}{$1.9\times 10^{-5}$}\\
+    \cline{1-5}
+    \makecell{相对偏差} & \makecell{$\rm -16\%$} & \makecell{$\rm -6\%$} & \makecell{$\rm 11\%$} & \makecell{$\rm 6\%$}\\
+    \cline{1-5}
+    \makecell{平均相对偏差} & \multicolumn{4}{c|}{$10\%$}\\
+    \cline{1-5}
+    \makecell{298K下的$K_a$} & \multicolumn{4}{c|}{$1.75\times 10^{-5}$}\\
+    \cline{1-5}
+    \makecell{相对误差} & \makecell{$\rm -9\%$} & \makecell{$\rm 3\%$} & \makecell{$\rm 20\%$} & \makecell{$\rm 15\%$}\\
+    \cline{1-5}
+    \makecell{平均相对误差} & \multicolumn{4}{c|}{$8\%$}\\
+    \cline{1-5}
+\end{tabularx}
+
+\normalsize
+
+\section*{三、实验分析与总结}
+\subsection*{（一）、实验分析}
+本实验通过pH法测定醋酸溶液的pH值(在校准pH计时，仪表显示的斜率为100.4)、通过酸碱滴定测定醋酸的浓度c来计算在一定温度下醋酸的电离平衡常数$K_a$与电离度$\alpha$，实验原理较为简单。
+
+通过该实验，我们可以得到以下几个结论：
+
+(1)对于弱酸，其浓度越小，其电离度越大；
+
+(2)浓度越大，弱酸溶液的$\rm [H^+]$越大，pH值越小；
+
+(3)在不同浓度下，电离平衡常数略有波动，但从变化趋势来看（具体可看下图），这种波动应当是由实验误差造成的，电离平衡常数的大小与弱酸的浓度无关。
+
+\begin{tikzpicture}
+    \begin{axis}[
+        width=14cm, % 增加图表的宽度
+        height=6cm, % 可以同时设置高度
+        title={图1. $\quad K_a -C_{HAc}$},
+        xlabel={$C_{HAc}\times 0.1mol\cdot L^{-1}$},
+        ylabel={$K_a \times 10^{-5}$},
+        xmin=0, xmax=1.5,
+        ymin=0, ymax=2.2,
+        xtick={0, 0.2, 0.4, 0.6, 0.8, 1.0, 1.2, 1.4},
+        ytick={0.2, 0.4, 0.6, 0.8, 1.0, 1.2, 1.4, 1.6, 1.8, 2.0 },
+        axis lines=left, % 坐标轴从左下角开始绘制
+        grid=none, % 移除网格线
+        major tick length=4pt, % 设置刻度线长度
+        x axis line style={->, line width=1pt}, % 为 x 轴添加单侧箭头
+        y axis line style={->, line width=1pt}, % 为 y 轴添加单侧箭头
+        xtick align=inside, % 将 x 轴的刻度线放置在外侧
+        ytick align=inside, % 将 y 轴的刻度线放置在外侧
+        tick style={line width=1pt, color=black},
+        font=\footnotesize
+    ]
+    \addplot[color=blue, line width=1pt,]
+        coordinates {(0.1397, 1.6)(0.2794, 1.8)(0.6985, 2.1)(1.397, 2.0)};
+    \addplot[only marks, mark=*, mark size=2pt, color=blue]
+        coordinates {(0.1397, 1.6)(0.2794, 1.8)(0.6985, 2.1)(1.397, 2.0)};
+    \end{axis}
+\end{tikzpicture}
+
+
+\bigskip
+
+查阅文献，醋酸在$\rm 298K$下的电离平衡常数为$\rm 1.75\times 10^{-5}$\textsuperscript{\cite{B1}}，在$\rm 25.0^{\circ}C$附近，电离平衡常数$K_a$与温度之间关联不明显，
+图像较为“平坦”，平坦段出现在$\rm 20^{\circ}C\sim 24^{\circ}C$\textsuperscript{\cite{JJSZ198706006}}，于是可以认为在$\rm 23.0^{\circ}C$的温度下，电离平衡常数约为$\rm 1.75\times 10^{-5}$，
+而本实验的测定值与其略有偏差。出现该误差，原因可能是：
+
+(1)滴定时出现操作误差；
+
+(2)醋酸易挥发，如果暴露在空气中太久会导致浓度的偏差；
+
+(3)转移溶液的时候，容器内壁有水，降低了溶液浓度。
+
+\subsection*{（二）、实验改进}
+依据误差的来源，本实验有以下的几个改进方向：
+
+(1)醋酸易挥发，NaOH容易和空气中的$\rm CO_2$发生反应，因此需要快速进行试验，尽量减少因挥发或者吸收空气中的物质导致的浓度变化；
+
+(2)测定pH时，盛放溶液的容器在盛放前应洁净干燥，使用滤纸片擦干水分；
+
+(3)进行滴定操作，快到滴定终点时需要放慢滴加溶液的速度，避免溶液添加过多。
+
+\section*{四、思考题}
+
+(1)弱电解质溶液的电离度($\alpha$)与哪些因素有关？
+
+弱电解质的电离度与弱电解质溶液的温度、浓度以及弱电解质的电离平衡常数有关。
+
+(2)若分别改变HAc溶液的温度和浓度，测得的$K_a$和$\alpha$有无变化？为什么？
+
+改变温度时，测得的$K_a$和$\alpha$均有变化，因为两者都和温度有关；
+但若是仅改变浓度，由于$K_a$只和温度有关，$K_a$将不会发生改变，但是会改变$\alpha$，因为：
+$$
+\alpha=\frac{[H^+]}{c}\quad,\quad K_a=\frac{[H^+]{[Ac^-]}}{[HAc]}=\frac{[H^+]^2}{c-[H^+]}
+$$
+根据两个式子，可以计算得到：
+$$
+[H^+]=\frac{-K_a+\sqrt{K_a^2+4K_ac}}{2}
+$$$$
+\alpha=\frac{[H^+]}{c}=\frac{-K_a+\sqrt{K_a^2+4K_ac}}{2c}=-\frac{K_a}{2c}+\sqrt{(\frac{K_a}{2c})^2+\frac{K_a}{c}}
+$$
+根据该式子，容易可以看出浓度c越小，电离度$\alpha$越大。
+
+\bibliographystyle{IEEEtran}
+\bibliography{data_5}
+
+\end{document}

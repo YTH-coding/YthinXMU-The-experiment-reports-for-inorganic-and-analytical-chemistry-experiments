@@ -1,0 +1,450 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{geometry} %设置边距，符合Word设定
+\geometry{a4paper, top=2.5cm, bottom=2.5cm, left=2.5cm, right=2.5cm}
+\usepackage{amsmath} %数学公式排版
+\usepackage{lmodern} %使用Latin Modern字体
+\usepackage{multirow} %单元格合并
+\usepackage{makecell} %优化单元格显示
+\usepackage{tabularx} %Latex的表格
+\usepackage{xeCJK} %排版中日韩（CJK）文字
+\usepackage{fontspec} %提供了一个自动和统一的接口来加载字体，\setmainfont用于设置主字体
+\usepackage{ctex} %中文支持
+\usepackage{cite} %文献引用
+\usepackage{pgfplots} %绘制散点图等图像
+\pgfplotsset{compat=1.16}
+\usepackage{xcolor} %在文档中为文字等添加颜色
+
+\setmainfont{Times New Roman}%
+
+% 导言区
+\title{\heiti\zihao{2} 实验：$\rm (NH_4)_2S_2O_8$氧化$\rm I^-$的反应速率、\\反应级数及活化能的测定}
+\author{专业名称\quad 姓\;名\quad 学号xxxxxxxxxxxxxx}
+\date{20xx年xx月xx日}
+
+%设置小四号字号，字号为12pt，行距为18pt
+\renewcommand{\normalsize}{\fontsize{12pt}{18pt}\selectfont}
+%文件开始
+\begin{document}
+
+\maketitle
+
+\setcounter{section}{0}
+\section*{一、实验原理与操作方法}
+\subsection*{（一）实验原理}
+水溶液中，过二硫酸钠和碘酸钾会发生如下反应：
+$$
+S_2O_8^{2-}+3I^-=2SO_4^{2-}+I_3^-
+$$
+
+若加入少量硫代硫酸钠溶液和淀粉溶液指示剂，$\rm I_3^-$会被$\rm S_2O_3^{2-}$还原为$\rm I^-$：
+$$
+2S_2O_3^{2-}+I_3^-=S_4O_6^{2-}+3I^-
+$$
+
+其中，前一个反应是主反应，速度较慢；后一个反应是引入的快速反应，用于快速消耗前一个反应的生成物$\rm I_3^-$，
+在已知$\rm 2S_2O_3^{2-}$的消耗量的情况下，可以得出前一个反应的反应量，也就是$\rm S_2O_8^{2-}$的消耗量。
+$\rm S_2O_3^{2-}$的消耗量可以通过所加入的$\rm Na_2S_2O_3$溶液的浓度与体积计算得出，即：
+$\Delta [S_2O_8^{2-}]=\frac{\Delta S_2O_3^{2-}}{2}$，此时要求$\rm (NH_4)_2S_2O_8$和KI过量。
+
+若知道反应时间$\Delta$t，主反应的平均反应速率可以表示为：
+$$
+\overline{V}=\frac{-\Delta [S_2O_8^{2-}]}{\Delta t}
+$$
+欲得出反应时间，需要使用淀粉溶液作指示剂，在$\rm Na_2S_2O_3$被完全消耗之后，$\rm I_3^-$会积累导致淀粉溶液变蓝，使用计时器可以得到反应时间。
+在时间比较短且浓度变化不大的情况下，认为平均反应速率$\overline{V}$等于瞬时速率$V$。
+
+对于主反应，其瞬时速率也可以表示为：
+$$
+V = k\cdot [S_2O_8^{2-}]^m\cdot [I^-]^n
+$$
+两边取（以10为底）对数之后将会得到：
+$$
+lgV=m\cdot lg[S_2O_8^{2-}] + n\cdot lg[I^-] + lgk
+$$
+分别作图$\rm lgV-lg[S_2O_8^{2-}]$和$\rm lgV-lg[I^-]$，求其斜率，即可得到反应级数m和n，数据代回，可以计算得到反应速率常数K。
+
+在不同的温度T下可以计算得到不同的反应速率常数K，由阿伦尼乌斯公式：
+$$\rm lgK=-\frac{E_a}{ln10RT}+lgA$$
+做出图像$\rm lgK-1/T$就可以通过直线斜率计算得到反应活化能$\rm E_a$。
+
+\subsection*{（二）操作方法}
+(1)加碘化钾（KI）溶液；
+
+(2)加$\rm 0.4\%$淀粉溶液；
+
+(3)加硫代硫酸钠（$\rm Na_2S_2O_3$）溶液；
+
+(4)加硝酸钾（$\rm KNO_3$）溶液；
+
+(5)加硫酸铵（$(NH_4)_2SO_4$）溶液；
+
+(6)准备好秒表，加过二硫酸铵（$(NH_4)_2S_2O_8$）溶液，同时启动秒表；
+
+(7)当溶液刚出现蓝色时，立即按停秒表，记录反应时间和温度；
+
+(8)相同配方，重复一次；另外，做温度不同的实验时，需要在水浴锅中将溶液预热2-3分钟。
+
+\subsection*{（三）实验中待记录的数据}
+实验前提供的数据：每个实验中KI溶液、淀粉溶液、$\rm Na_2S_2O_3$溶液、$\rm KNO_3$溶液、$\rm (NH_4)_2SO_4$溶液、$\rm (NH_4)_2S_2O_8$溶液的浓度和体积。
+
+实验中测定的数据：反应时间$\Delta$t、反应结束时的温度T。
+
+\subsection*{（四）化学反应方程式}
+$$
+S_2O_8^{2-}+3I^-=2SO_4^{2-}+I_3^-
+$$$$
+2S_2O_3^{2-}+I_3^-=S_4O_6^{2-}+3I^-
+$$
+
+\section*{二、结果与讨论}
+
+\subsubsection*{表1：浓度对化学反应速率的影响}
+\bigskip
+\noindent
+\fontsize{9pt}{12pt}\selectfont
+\renewcommand\arraystretch{1}
+\begin{tabularx}{13.05cm}{|p{0.3cm}|p{4.5cm}|p{1.65cm}|p{1.65cm}|p{1.65cm}|p{1.65cm}|p{1.65cm}|}
+    \cline{1-7}
+    \multicolumn{2}{|c|}{实验序号} & \makecell{1} & \makecell{2} & \makecell{3} & \makecell{4} & \makecell{5}\\
+    \cline{1-7}
+    \multicolumn{2}{|c|}{反应温度（水温）/K} & \multicolumn{5}{c|}{298.15}\\
+    \cline{1-7}
+    \multirow{7}{*}{\rotatebox{90}{试剂的用量（mL）}}
+        & $\rm 0.20mol\cdot L^{-1}KI$溶液 & \makecell{1.00} & \makecell{1.00} & \makecell{1.00} & \makecell{0.50} & \makecell{0.25}\\
+        \cline{2-7}
+        & $\rm 0.20\%$ 淀粉溶液 & \multicolumn{5}{c|}{\makecell{0.20}}\\
+        \cline{2-7}
+        & $\rm 0.010mol\cdot L^{-1}Na_2S_2O_3$溶液 & \multicolumn{5}{c|}{\makecell{0.40}}\\
+        \cline{2-7}
+        & $\rm 0.20mol\cdot L^{-1}KNO_3$溶液 & \makecell{0.00} & \makecell{0.00} & \makecell{0.00} & \makecell{0.50} & \makecell{0.75}\\
+        \cline{2-7}
+        & $\rm 0.20mol\cdot L^{-1}(NH_4)_2SO_4$溶液 & \makecell{0.00} & \makecell{0.50} & \makecell{0.75} & \makecell{0.00} & \makecell{0.00}\\
+        \cline{2-7}
+        & \multicolumn{6}{c|}{先混合以上溶液，往预混合溶液中加入$\rm (NH_4)_2S_2O_8$溶液需同时计时。}\\
+        \cline{2-7}
+        & $\rm 0.20mol\cdot L^{-1}(NH_4)_2S_2O_8$溶液 & \makecell{1.00} & \makecell{0.50} & \makecell{0.25} & \makecell{1.00} & \makecell{1.00}\\
+    \cline{1-7}
+    \multicolumn{2}{|c|}{反应时间$\Delta$$\rm t_1/s$} & \makecell{35.53} & \makecell{60.24} & \makecell{92.59} & \makecell{61.62} & \makecell{85.07}\\
+    \cline{1-7}
+    \multicolumn{2}{|c|}{反应时间$\Delta$$\rm t_2/s$} & \makecell{34.14} & \makecell{61.63} & \makecell{93.87} & \makecell{59.96} & \makecell{92.83}\\
+    \cline{1-7}
+    \multicolumn{2}{|c|}{平均反应时间$\Delta$$\rm t/s$} & \makecell{34.84} & \makecell{60.94} & \makecell{93.23} & \makecell{60.79} & \makecell{88.95}\\
+    \cline{1-7}
+    \multicolumn{2}{|c|}{$-\Delta$$\rm [S_2O_8^{2-}]/mol\cdot L^{-1}$}  & \makecell{$\rm 7.69\times 10^{-4}$}   & \makecell{$\rm 7.69\times 10^{-4}$}   & \makecell{$\rm 7.69\times 10^{-4}$}   & \makecell{$\rm 7.69\times 10^{-4}$}   & \makecell{$\rm 7.69\times 10^{-4}$}\\
+    \cline{1-7}
+    \multicolumn{2}{|c|}{$\rm lg[S_2O_8^{2-}]$}                         & \makecell{-1.114}                     & \makecell{-1.415}                     & \makecell{-1.716}                     & \makecell{-1.114}                     & \makecell{-1.114}\\
+    \cline{1-7}
+    \multicolumn{2}{|c|}{$\rm lg[I^-]$}                                 & \makecell{-1.114}                     & \makecell{-1.114}                     & \makecell{-1.114}                     & \makecell{-1.415}                     & \makecell{-1.716}\\
+    \cline{1-7}
+    \multicolumn{2}{|c|}{反应速率$\rm V/mol\cdot L^{-1} \cdot s^{-1}$}   & \makecell{$\rm 2.21\times 10^{-5}$}   & \makecell{$\rm 1.26\times 10^{-5}$}   & \makecell{$\rm 8.25\times 10^{-6}$}   & \makecell{$\rm 1.26\times 10^{-5}$}  & \makecell{$\rm 8.65\times 10^{-6}$}\\
+    \cline{1-7}
+    \multicolumn{2}{|c|}{$\rm lgV$}                                     & \makecell{-4.656}                     & \makecell{-4.899}                     & \makecell{-5.083}                      & \makecell{-4.898}                    & \makecell{-5.063}\\
+    \cline{1-7}
+\end{tabularx}
+
+\normalsize
+\bigskip
+作出两个图像$\rm lgV-lg[S_2O_8^{2-}]$与$\rm lgV-lg[I^-]$，以及拟合出来的直线、皮尔逊相关系数，两幅图像具体如下：
+\bigskip
+
+\begin{tikzpicture}
+    \begin{axis}[
+        width=6.7cm, % 增加图表的宽度
+        height=6cm, % 可以同时设置高度
+        title={图1.$\quad lgV-lg[S_2O_8^{2-}]$},
+        xlabel={$lg[S_2O_8^{2-}]$},
+        ylabel={$lgV$},
+        xmin=-1.8, xmax=-0.9,
+        ymin=-5.15, ymax=-4.6,
+        xtick={-1.75, -1.5, -1.25, -1},
+        ytick={-5.15, -5.05, -4.95, -4.85, -4.75, -4.65},
+        axis lines=left, % 坐标轴从左下角开始绘制
+        grid=none, % 移除网格线
+        major tick length=4pt, % 设置刻度线长度
+        x axis line style={->, line width=1pt}, % 为 x 轴添加单侧箭头
+        y axis line style={->, line width=1pt}, % 为 y 轴添加单侧箭头
+        xtick align=inside, % 将 x 轴的刻度线放置在外侧
+        ytick align=inside, % 将 y 轴的刻度线放置在外侧
+        tick style={line width=1pt, color=black}, % 调整刻度线的粗细
+        font=\footnotesize
+    ]
+    \addplot[color=blue, line width=1pt,]
+        coordinates {(-1.716,-5.083)(-1.415,-4.899)(-1.114,-4.656)};
+    \addplot[domain=-1.716:-1.114, samples=100, color=blue, dashed, line width=1pt,]
+        {0.71*x - 3.8748};
+    \addplot[only marks, mark=*, mark size=2pt, color=blue]
+        coordinates {(-1.716,-5.083)(-1.415,-4.899)(-1.114,-4.656)};
+    \node[anchor=west] at (axis cs:-1.8,-4.7) {$y = 0.7100x - 3.8748$};
+    \node[anchor=west] at (axis cs:-1.8,-4.8) {$R^2 = 0.9939$};
+    \end{axis}
+
+    \begin{axis}[
+        width=6.7cm, % 增加图表的宽度
+        height=6cm, % 可以同时设置高度
+        title={图2. $\quad lgV-lg[I^-]$},
+        xlabel={$lg[I^-]$},
+        ylabel={$lgV$},
+        xmin=-1.8, xmax=-0.9,
+        ymin=-5.15, ymax=-4.6,
+        at={(7.3cm,0cm)}, % 设置第二个图表的位置，使其与第一个图表并排
+        xtick={-1.75, -1.5, -1.25, -1},
+        ytick={-5.15, -5.05, -4.95, -4.85, -4.75, -4.65},
+        axis lines=left, % 坐标轴从左下角开始绘制
+        grid=none, % 移除网格线
+        major tick length=4pt, % 设置刻度线长度
+        x axis line style={->, line width=1pt}, % 为 x 轴添加单侧箭头
+        y axis line style={->, line width=1pt}, % 为 y 轴添加单侧箭头
+        xtick align=inside, % 将 x 轴的刻度线放置在外侧
+        ytick align=inside, % 将 y 轴的刻度线放置在外侧
+        tick style={line width=1pt, color=black},
+        font=\footnotesize
+    ]
+    \addplot[color=blue, line width=1pt,]
+        coordinates {(-1.716,-5.063)(-1.415,-4.898)(-1.114,-4.656)};
+    \addplot[domain=-1.716:-1.114, samples=100, color=blue, dashed, line width=1pt,]
+        {0.6761*x - 3.9156};
+    \addplot[only marks, mark=*, mark size=2pt, color=blue]
+        coordinates {(-1.716,-5.063)(-1.415,-4.898)(-1.114,-4.656)};
+    \node[anchor=west] at (axis cs:-1.8,-4.7) {$y = 0.6761x - 3.9156$};
+    \node[anchor=west] at (axis cs:-1.8,-4.8) {$R^2 = 0.9884$};
+    \end{axis}
+\end{tikzpicture}
+
+具体的计算过程如下：
+
+先计算平均反应时间$\Delta$t和$\rm [S_2O_8^{2-}]$浓度的减小量
+$$
+\Delta t = \frac{\Delta t_1+\Delta t_2}{2}\quad;\quad
+-\Delta [S_2O_8^{2-}]=\frac{1}{2}\cdot [S_2O_3^{2-}]
+$$
+
+但是，其中的$[S_2O_3^{2-}]$不是加入的硫代硫酸钠溶液的浓度，而是经过全部溶液混合稀释之后的硫代硫酸钠的浓度，也就是$\rm [S_2O_3^{2-}]=\frac{0.40\times 0.010}{V_{\Sigma}}mol\cdot L^{-1}$，
+$V_{\Sigma}$表示的是六种溶液混合后的总体积，即：
+$$
+V_{\Sigma}=V_{KI}+V_{\text{淀粉溶液}}+V_{Na_2S_2O_3}+V_{KNO_3}+V_{(NH_4)_2SO_4}+V_{(NH_4)_2S_2O_8}=2.6mL;
+$$
+碘化钾和过二硫酸钠也是被稀释了，用上述方式同样可以计算得出$\rm [S_2O_8^{2-}]$和$\rm [I^-]$，分别取对数，则得到$\rm lg[S_2O_8^{2-}]$和$\rm lg[I^-]$的值。
+
+由平均反应时间$\Delta$t和$\rm [S_2O_8^{2-}]$浓度的减小量，可以计算得到平均反应速率$\rm \overline{V}$，将其近似为损失反应速率V，取对数后得到$\rm lgV$的值。
+
+分别保持$\rm [I^-]$和$\rm [S_2O_3^{2-}]$不变，做出图像$\rm lgV-lg[S_2O_8^{2-}]$与$\rm lgV-lg[I^-]$，那么拟合出来的两条直线的斜率就分别是m和n，从而读出m=0.7100， n=0.6761。
+
+同时，两直线的截距近似相等，均在-3.9附近，平均相对偏差为$0.6\%$，偏差很小，而截距等于lgK，表明浓度对于反应速率常数影响不大。
+
+\subsubsection*{表2：温度对化学反应速率的影响}
+\bigskip
+
+\fontsize{9pt}{12pt}\selectfont
+\renewcommand\arraystretch{1}
+\begin{tabularx}{11.6cm}{|p{0.3cm}|p{4.5cm}|p{1.7cm}|p{1.7cm}|p{1.7cm}|p{1.7cm}|}
+    \cline{1-6}
+    \multicolumn{2}{|c|}{实验序号} & \makecell{1} & \makecell{2} & \makecell{3} & \makecell{4}\\
+    \cline{1-6}
+    \multicolumn{2}{|c|}{反应温度（水温）/K} & \makecell{298.15} & \makecell{308.35} & \makecell{318.55} & \makecell{328.55}\\
+    \cline{1-6}
+    \multirow{7}{*}{\rotatebox{90}{试剂的用量（mL）}}
+        & $\rm 0.20mol\cdot L^{-1}KI$溶液 & \makecell{0.50} & \makecell{0.50} & \makecell{0.50} & \makecell{0.50}\\
+        \cline{2-6}
+        & $\rm 0.20\%$淀粉溶液 & \makecell{0.20} & \makecell{0.20} & \makecell{0.20} & \makecell{0.20}\\
+        \cline{2-6}
+        & $\rm 0.010mol\cdot L^{-1}Na_2S_2O_3$溶液 & \makecell{0.40} & \makecell{0.40} & \makecell{0.40} & \makecell{0.40}\\
+        \cline{2-6}
+        & $\rm 0.20mol\cdot L^{-1}KNO_3$溶液 & \makecell{0.50} & \makecell{0.50} & \makecell{0.50} & \makecell{0.50}\\
+        \cline{2-6}
+        & $\rm 0.20mol\cdot L^{-1}(NH_4)_2SO_4$溶液 & \makecell{0.00} & \makecell{0.00} & \makecell{0.00} & \makecell{0.00}\\
+        \cline{2-6}
+        & \multicolumn{5}{c|}{先混合以上溶液，往预混合溶液中加入$\rm (NH_4)_2S_2O_8$溶液需同时计时。}\\
+        \cline{2-6}
+        & $\rm 0.20mol\cdot L^{-1}(NH_4)_2S_2O_8$溶液 & \makecell{1.00} & \makecell{1.00} & \makecell{1.00} & \makecell{1.00}\\
+    \cline{1-6}
+    \multicolumn{2}{|c|}{反应时间$\Delta$$\rm t_1/s$} & \makecell{61.62} & \makecell{30.33} & \makecell{20.11} & \makecell{11.35}\\
+    \cline{1-6}
+    \multicolumn{2}{|c|}{反应时间$\Delta$$\rm t_2/s$} & \makecell{59.96} & \makecell{27.65} & \makecell{18.62} & \makecell{11.10}\\
+    \cline{1-6}
+    \multicolumn{2}{|c|}{平均反应时间$\Delta$$\rm t/s$} & \makecell{60.79} & \makecell{28.99} & \makecell{19.36} & \makecell{11.22}\\
+    \cline{1-6}
+    \multicolumn{2}{|c|}{$-\Delta$$\rm [S_2O_8^{2-}]/mol\cdot L^{-1}$}  & \makecell{$7.69\times 10^{-4}$} & \makecell{$7.69\times 10^{-4}$} & \makecell{$7.69\times 10^{-4}$} & \makecell{$7.69\times 10^{-4}$}\\
+    \cline{1-6}
+    \multicolumn{2}{|c|}{$\rm lg[S_2O_8^{2-}]$}         & \makecell{-1.114} & \makecell{-1.114} & \makecell{-1.114} & \makecell{-1.114}\\
+    \cline{1-6}
+    \multicolumn{2}{|c|}{$\rm lg[I^-]$}                 & \makecell{-1.415} & \makecell{-1.415} & \makecell{-1.415} & \makecell{-1.415}\\
+    \cline{1-6}
+    \multicolumn{2}{|c|}{反应速率$\rm V/mol\cdot L^{-1} s^{-1}$} & \makecell{$1.26\times 10^{-5}$} & \makecell{$2.65\times 10^{-5}$} & \makecell{$3.97\times 10^{-5}$} & \makecell{$6.86\times 10^{-5}$}\\
+    \cline{1-6}
+    \multicolumn{2}{|c|}{$\rm lgV$}                     & \makecell{-4.899} & \makecell{-4.577} & \makecell{-4.401} & \makecell{-4.164}\\
+    \cline{1-6}
+    \multicolumn{2}{|c|}{反应速率常数K}                 & \makecell{$7.06\times 10^{-4}$} & \makecell{$1.48\times 10^{-3}$} & \makecell{$2.22\times 10^{-3}$} & \makecell{$3.84\times 10^{-3}$}\\
+    \cline{1-6}
+    \multicolumn{2}{|c|}{lgK}                           & \makecell{-3.151} & \makecell{-2.829} & \makecell{-2.653} & \makecell{-2.416}\\
+    \cline{1-6}
+    \multicolumn{2}{|c|}{$\frac{1}{T}/(10^{-3}K^{-1})$} & \makecell{3.354} & \makecell{3.243} & \makecell{3.139} & \makecell{3.044}\\
+    \cline{1-6}
+\end{tabularx}
+\normalsize
+
+\bigskip
+
+做出lgV关于$\rm \frac{1}{T}$的图像，绘制出拟合出来的直线，计算皮尔逊相关系数并标注，图像具体如下：
+
+\begin{tikzpicture}
+    \begin{axis}[
+        width=14cm, % 增加图表的宽度
+        height=6cm, % 可以同时设置高度
+        title={图3. $\quad lgV-\frac{1}{T}$},
+        xlabel={$\frac{1}{T}/(10^{-3}K^{-1})$},
+        ylabel={$lgV$},
+        xmin=3.02, xmax=3.40,
+        ymin=-3.5, ymax=-2.25,
+        xtick={3.05, 3.10, 3.15, 3.20, 3.25, 3.30, 3.35},
+        ytick={-3.5, -3.3, -2.9, -3.1, -2.7, -2.5, -2.3},
+        axis lines=left, % 坐标轴从左下角开始绘制
+        grid=none, % 移除网格线
+        major tick length=4pt, % 设置刻度线长度
+        x axis line style={->, line width=1pt}, % 为 x 轴添加单侧箭头
+        y axis line style={->, line width=1pt}, % 为 y 轴添加单侧箭头
+        xtick align=inside, % 将 x 轴的刻度线放置在外侧
+        ytick align=inside, % 将 y 轴的刻度线放置在外侧
+        tick style={line width=1pt, color=black},
+        font=\footnotesize
+    ]
+    \addplot[color=blue, line width=1pt,]
+        coordinates {(3.354,-3.151)(3.243,-2.829)(3.139,-2.653)(3.044,-2.416)};
+    \addplot[domain=3.044:3.354, samples=100, color=blue, dashed, line width=1pt,]
+        {-2.3059*x + 4.6051};
+    \addplot[only marks, mark=*, mark size=2pt, color=blue]
+        coordinates {(3.354,-3.151)(3.243,-2.829)(3.139,-2.653)(3.044,-2.416)};
+    \node[anchor=west] at (axis cs:3.04,-2.8) {$y = -2.3059x + 4.6051$};
+    \node[anchor=west] at (axis cs:3.04,-2.9) {$R^2 = 0.9902$};
+    \end{axis}
+\end{tikzpicture}
+
+\bigskip
+
+首先，由前一个实验可以得到反应级数：m=0.7100，n=0.6761，按照前一个实验的方式也可以计算得到每个温度下的反应速率的对数$\rm lgV$、
+主反应中反应离子浓度的对数$\rm lg[S_2O_8^{2-}]$和$\rm lg[I^-]$，根据公式：
+$$
+lgV=m\cdot lg[S_2O_8^{2-}]+n\cdot lg[I^-]+lgK
+$$
+可以计算得到反应速率常数K和K的对数lgK。以lgK对$\rm \frac{1}{T}$作图，得一直线，由图3可以求得斜率：
+$$
+k=\frac{-2.3059}{1\times 10^{-3}K^{-1}}=-2305.9K
+$$
+
+因为斜率$\rm k=-\frac{E_a}{ln10R}$（这里用的是公式$\rm lgK=lgA-\frac{E_a}{ln10RT}$，$\rm ln10\approx 2.303$），所以反应的活化能为：
+$$
+E_a=-ln10Rk=-2.303\times 8.314J\cdot mol^{-1}\cdot K^{-1}\times (-2305.9K)=44.15kJ\cdot mol^{-1}
+$$
+
+\section*{三、实验分析与总结}
+\subsection*{（一）、实验分析}
+该反应是经典的氧化还原反应，通过该实验，可以了解到到化学反应动力学相关理论在现实中的应用。
+
+通过查阅文献，我们得知，在反应$S_2O_8^{2-}+3I^-=2SO_4^{2-}+I_3^-$的速率方程$V = k\cdot [S_2O_8^{2-}]^m\cdot [I^-]^n$中，m=1，n=1\textsuperscript{\cite{FYSZ198802003}}，
+而实验得到的数据为m=0.7100，n=0.6761，误差较大，相对误差分别为$\rm -29\%$和$\rm -32.39\%$;
+而该反应活化能的理论值为$51.8kJ\cdot mol^{-1}$\textsuperscript{\cite{HXYJ200002038}}，实验测得的数据为$44.15kJ\cdot mol^{-1}$，相对误差达到$\rm -14.7\%$，实验误差同样较大；
+若换用m=1，n=1对后一个实验进行修正，得到的新的lgK，将其对1/T作图，可以得到另一条直线，图像如下：
+\bigskip
+
+\begin{tikzpicture}
+    \begin{axis}[
+        width=14cm, % 增加图表的宽度
+        height=6cm, % 可以同时设置高度
+        title={图4. $\quad lgV-\frac{1}{T};(m=1, n=1)$},
+        xlabel={$\frac{1}{T}/(10^{-3}K^{-1})$},
+        ylabel={$lgV$},
+        xmin=3.02, xmax=3.40,
+        ymin=-2.5, ymax=-1.5,
+        xtick={3.05, 3.10, 3.15, 3.20, 3.25, 3.30, 3.35},
+        ytick={-2.5, -2.3, -2.1, -1.9, -1.7},
+        axis lines=left, % 坐标轴从左下角开始绘制
+        grid=none, % 移除网格线
+        major tick length=4pt, % 设置刻度线长度
+        x axis line style={->, line width=1pt}, % 为 x 轴添加单侧箭头
+        y axis line style={->, line width=1pt}, % 为 y 轴添加单侧箭头
+        xtick align=inside, % 将 x 轴的刻度线放置在外侧
+        ytick align=inside, % 将 y 轴的刻度线放置在外侧
+        tick style={line width=1pt, color=black},
+        font=\footnotesize
+    ]
+    \addplot[color=blue, line width=1pt,]
+        coordinates {(3.354,-2.369)(3.243,-2.047)(3.139,-1.872)(3.044,-1.635)};
+    \addplot[domain=3.044:3.354, samples=100, color=blue, dashed, line width=1pt,]
+        {-2.3020*x + 5.3743};
+    \addplot[only marks, mark=*, mark size=2pt, color=blue]
+        coordinates {(3.354,-2.369)(3.243,-2.047)(3.139,-1.872)(3.044,-1.635)};
+    \node[anchor=west] at (axis cs:3.04,-2.0) {$y = -2.3020x + 5.3743$};
+    \node[anchor=west] at (axis cs:3.04,-2.1) {$R^2 = 0.9900$};
+    \end{axis}
+\end{tikzpicture}
+
+计算得到的$E_a=-ln10Rk=-2.303\times 8.314J\cdot mol^{-1}\cdot K^{-1}\times (-2302.0K)=44.08kJ\cdot mol^{-1}$，可知修正过的结果与原来相差不大，与文献值出入仍然较大。
+
+查阅文献之后，猜测可能是$\rm (NH_4)_2S_2O_8$分解产生了$\rm H_2SO_5$分子（少量的过二硫酸铵分解对实验影响不大），在水溶液中水解生成了$\rm H_2O_2$\textsuperscript{\cite{HXYJ200002038}}，
+它将会极速氧化$\rm I^-$，而且实验过程中，我们先将所有溶液分配好并装进反应容器之后才逐个进行反应，溶液放置时间长，更加容易分解产生$H_2O_2$。
+
+在改变$\rm (NH_4)_2S_2O_8$的量的情况下，由于加入的过二硫酸铵越少的组被放置时间越长，$\rm H_2O_2$的浓度越高，相比于未分解时，反应时间越短，即表现为低浓度时的速率偏快，斜率变小，所以m的值偏小；
+
+在改变KI的量的情况下，原因与前面类似，浓度低的组放置时间越长，同样导致即表现为低浓度时的速率偏快，斜率变小，所以n的值偏小。
+
+在改变温度时情况下，猜测是温度的升高促进了$H_2O_2$的分解，也就是温度较低时，$H_2O_2$含量高，反应速率偏快，即在1/T较大时，lgV偏大，导致lgK偏大，使得图像斜率偏小，也就是活化能$\rm E_a$偏小。
+
+\subsection*{（二）、实验改进}
+参考相关文献，实验可以有如下改进：
+
+(1)溶液现装现用，不能把配好并装进烧杯或试管中的混合溶液及$\rm (NH_4)_2S_2O_8$溶液搁置一边较长时间之后再用；
+
+(2)试剂需要现配现用，配置溶液不使能用长年放置的药品；
+
+(3)在$\rm (NH_4)_2S_2O_8$溶液里面加入微量的（相当于$\rm (NH_4)_2S_2O_8$用量的$\rm 0.5-5\%$）$\rm Na_2SO_3$，这样可以在不明显影响$\rm (NH_4)_2S_2O_8$浓度（两者反应的速率极慢）的情况下去除溶液中的$\rm H_2SO_5$和$H_2O_2$，避免其他物质氧化碘离子；
+由于加入的$\rm Na_2SO_3$在反应中会起到$Na_2S_2O_3$的作用，所以还需要将其去除，可以在配置溶液时加入痕量的$I^-$将其去除，这样可以最大限度地保证实验地准确性\textsuperscript{\cite{HXYJ200002038}}。
+
+\section*{四、思考题}
+(1)实验中为什么可以由反应溶液出现蓝色的时间长短来计算反应速率？反应溶液出现蓝色后，反应是否就终止了？
+
+当反应溶液出现蓝色时，记下所用时间$\Delta$t，出现蓝色说明硫代硫酸钠反应完全，可以根据硫代硫酸钠的物质的量来计算主反应中$S_2O_8^{2-}$的消耗量，
+也就是在时间$\Delta$t内，$S_2O_8^{2-}$的消耗量为$-\Delta$$\rm [S_2O_8^{2-}]$，因此可以用来计算反应速率。
+
+反应溶液出现蓝色后，反应并未停止，出现蓝色只是硫代硫酸钠被完全消耗，而$S_2O_8^{2-}$和$I^-$是过量的，反应仍然在进行。
+
+(2)在本实验中，加入$\rm Na_2S_2O_3$的作用是什么？$\rm (NH_4)_2S_2O_8$会直接把$\rm Na_2S_2O_3$氧化吗？$\rm Na_2S_2O_3$的用量过多或过少对实验结果有何影响？
+
+加入$\rm Na_2S_2O_3$用以快速消耗主反应产生的$I_3^-$，从而可以通过$\rm Na_2S_2O_3$的总量来计算主反应的反应量。
+
+$\rm (NH_4)_2S_2O_8$不会直接把$\rm Na_2S_2O_3$氧化，从热力学角度看，两者确实会发生反应，
+但是从动力学角度看，$\rm S_2O_8^{2-}$与$\rm S_2O_3^{2-}$的反应速度很慢，即反应的活化能很高，反应速度常数很小，反应所需要的时间很长。
+在$S_2O_8^{2-}-S_2O_3^{2-}-I^-$系统中，容易判断出碘离子是两者反应的催化剂，改变了反应路径，降低了反应的活化能。
+所以，由于$\rm S_2O_8^{2-}$与$\rm S_2O_3^{2-}$直接反应的活化能较高，因此会按活化能更低，反应速度较快的途径进行反应，而不是直接反应将$\rm Na_2S_2O_3$氧化\textsuperscript{\cite{BSSZ200302005}}。
+
+$\rm Na_2S_2O_3$用量过多会导致$\rm S_2O_8^{2-}$浓度变化较大，蓝色出现时间较长，此时平均速率无法近似等于瞬时速率；如果用量过少，蓝色出现的时间会比较短，难以计时，导致误差。
+
+(3)下列情况对实验结果有何影响？
+
+a.取用六种试剂的量简没有分开专用；
+
+b.先加$\rm (NH_4)_2S_2O_8$溶液，最后加KI溶液；
+
+c.缓慢加入$\rm (NH_4)_2S_2O_8$溶液；
+
+a.如果量筒没有分开专用，会导致反应提前进行，也就是可能会导致一些反应物浓度降低，使得实验结果不准确；
+
+b.先加$\rm (NH_4)_2S_2O_8$溶液，最后加KI溶液会导致$\rm (NH_4)_2S_2O_8$直接与$\rm Na_2S_2O_3$反应，使得所记录的反应时间提前；
+
+c.缓慢加入$\rm (NH_4)_2S_2O_8$溶液可能会导致溶液混合不均匀，使得时间测量不准确。
+
+
+(4)本实验中量取反应物的用量时，为什么可以用量简而不需用移液管来精确量取它们的体积，这样做对实验的准确度有无影响？
+
+使用量筒可以简化操作流程，而且重复实验可以提高实验的准确性，而且实验要求的精确程度没有那么高，主反应反应物浓度的些许变化对于实验来说影响不大，因此可以用量简而不需用移液管来精确量取它们的体积，而且对实验的准确度影响不大。
+
+(5)根据实验结果，总结浓度、温度对反应速率及反应速率常数的影响。
+
+在稀溶液中，浓度越大、温度越高，反应速率越大；浓度的变化对反应速率常数没有显著影响，但是温度可以，温度越高，反应速率常数越大。
+
+(6)根据反应方程式能否直接确定反应级数，为什么？试用本实验的结果加以说明。
+
+不可以，通过本实验得到的反应级数不等于反应方程式中对应物质前的系数，而该实验在文献中的反应级数\textsuperscript{\cite{FYSZ198802003}}也和反应方程式中反应物的系数不一致，说明无法根据反应方程式直接确定反应级数。
+
+\bibliographystyle{IEEEtran}
+\bibliography{data_4}
+
+\end{document}

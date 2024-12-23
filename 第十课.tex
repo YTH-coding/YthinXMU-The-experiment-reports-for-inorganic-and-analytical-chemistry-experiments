@@ -1,0 +1,489 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{geometry} %设置边距，符合Word设定
+\geometry{a4paper, top=2.5cm, bottom=2.5cm, left=2.5cm, right=2.5cm}
+\usepackage{amsmath} %数学公式排版
+\usepackage{lmodern} %使用Latin Modern字体
+\usepackage{graphicx} % 引入graphicx包以插入图片
+\usepackage{multirow} %单元格合并
+\usepackage{makecell} %优化单元格显示
+%\usepackage{tabularx} %Latex的表格，但是这里使用最简单的就可以了
+\usepackage{xeCJK} %排版中日韩（CJK）文字
+\usepackage{fontspec} %提供了一个自动和统一的接口来加载字体，\setmainfont用于设置主字体
+\usepackage{ctex} %中文支持
+\usepackage{cite} %文献引用
+\usepackage{wrapfig} %插入图片的位置
+
+\setmainfont{Times New Roman}
+
+% 导言区
+
+%设置小四号字号，字号为12pt，行距为18pt
+\renewcommand{\normalsize}{\fontsize{12pt}{18pt}\selectfont}
+
+%改这里可以修改实验报告表头的信息
+\newcommand{\experiName}{配合物的生成与性质}
+
+\newcommand{\collage}{collage}
+\newcommand{\studentNum}{studentNum}
+\newcommand{\name}{your name}
+
+\newcommand{\exdata}{20xx.xx.xx}
+\newcommand{\supervisor}{your teacher}
+
+%文件开始
+\begin{document}
+
+\begin{wrapfigure}{l}{0.2\textwidth} % 创建一个在左侧的环绕图片，宽度为页面宽度的10%
+    \centering
+    \includegraphics[width=\linewidth]{chem} % 插入图片，宽度设置为分配的宽度
+\end{wrapfigure}
+
+\quad\\
+\noindent \text{\heiti 实验名称}\underline{\makebox[25.5em][c]{\heiti \experiName}}\\
+\text{\heiti 学院}\underline{\makebox[8em][c]{\collage}}
+\text{\heiti 学号}\underline{\makebox[9em][c]{\studentNum}}
+\text{\heiti 姓名}\underline{\makebox[6em][c]{\name}}\\
+\text{\heiti 日期} \underline{{\makebox[7.5em][c]{\exdata}}}
+\text{\heiti 指导教师}\underline{{\makebox[7em][c]{\supervisor}}}
+\text{\heiti 成绩评定} \underline{\hspace{4em}}\\
+
+\section*{一、实验原理}
+
+金属离子和某些物质能够形成络合离子，以物质$[Co(NH_3)_6]Cl_3$为例，$Co^{3+}$是配合物的中心离子，有6个$NH_3$与其配位，是配位体，两者构成内界，而$Cl^-$是外界。
+
+金属离子和配位体发射反应生成配合物的反应存在限度，即配位平衡，在形成配合物后，其性质都会发生会改变，比如氧化性、还原性、颜色和溶解度等。
+
+对于一个配位平衡，比如$Co^{3+}+6NH_3 \rightleftharpoons [Co(NH_3)_6]^{3+}$，其平衡常数为：
+$$
+K_{\text{稳}}=\frac{[[Co(NH_3)_6]^{3+}]}{[Co^{3+}]\cdot [NH_3]^6}
+$$
+所以，$K_{\text{稳}}$越大，金属离子就越容易生成配离子，配离子的稳定性就越强。
+
+根据平衡移动原理，改变中心离子或配位体的浓度会使配位平衡发生移动，例如改变溶液的浓度，或者加入沉淀剂、氧化剂或还原剂、改变溶液的酸度等条件，
+因此，配位平衡能够和酸碱平衡、沉淀平衡、氧化还原平衡等耦合，实现配合物的解离与转化，从而在化学分析、化工方面得以应用。
+
+\section*{二、实验内容}
+
+\subsection*{1.配合物的生成和组成}
+
+\fontsize{10pt}{12pt}\selectfont
+\renewcommand\arraystretch{1}
+\noindent
+\begin{tabular}{|p{6cm}|p{3cm}|p{6cm}|}
+    \hline
+    \makecell{\textbf{实验步骤}} & \makecell{\textbf{实验现象}} & \makecell{\textbf{现象解释及方程式}} \\
+    \hline
+    1)取一支小试管，加入1 mL 0.1$\rm mol\cdot L^{-1}$ $CuSO_4$ 溶液，逐滴加入6 $\rm mol\cdot L^{-1}$ $NH_3\cdot H_2O$，边加边振荡，
+    观察产生沉淀的颜色和状态。
+    & 1) 溶液中生成蓝色絮状沉淀；
+    & 1) $CuSO_4+2NH_3\cdot H_2O\to Cu(OH)_2\downarrow + (NH_3)_2SO_4$；
+    \\
+    2) 继续加氨水，直到沉淀完全溶解，观察溶液的颜色。
+    & 2)沉淀溶解，变为深蓝色溶液。
+    & 2) $Cu^{2+}+4NH_3\to [Cu(NH_3)_4]^{2+}$\\
+    \hline
+    将此溶液分成两份：1) 一份加入几滴0.1 $\rm mol\cdot L^{-1}$$BaCl_2$溶液；
+    & 1)溶液的蓝色变淡，产生淡蓝色沉淀；
+    & $Ba^{2+}+SO_4^{2+}\to BaSO_4$白色沉淀，因溶液呈蓝色而看起来像淡蓝色；
+    \\
+    2) 另一份加入几滴0.1 $\rm mol\cdot L^{-1}$ $NaOH$溶液，观察实验现象。
+    & 2)没有沉淀生成
+    & 内界：$[Cu(NH_3)_4]$，外界：$SO_4^{2+}$，加入氢氧化钠不影响内界
+    \\
+    \hline
+\end{tabular}
+%\caption{实验步骤与现象}
+\normalsize
+\medskip
+
+\noindent\textbf{小结：}
+
+使用氨分子等配位体可以和金属盐类形成配合物，，配合物的性质与原来的盐类的性质不一样，
+其中配合物和金属离子形成内界，也就是形成配离子，原有盐类剩下的阴离子形成外界，外界离子的特征反应仍然可以发生，
+而配位体与金属离子的结合较为紧密，在本实验中，加入的氢氧化钠没有破坏内界。
+
+\subsection*{2.配离子和简单离子性质的比较}
+
+（1）$Fe^{3+}$与$[Fe(CN)_6]^{3+}$的性质的比较
+
+\fontsize{10pt}{12pt}\selectfont
+\renewcommand\arraystretch{1}
+\noindent
+\begin{tabular}{|m{6cm}|m{3cm}|m{6cm}|}
+    \hline
+    \makecell{\textbf{实验步骤}} & \makecell{\textbf{实验现象}} & \makecell{\textbf{现象解释及方程式}} \\
+    \hline
+    分别向两支盛着1) 0.5 mL 0.1 $\rm mol\cdot L^{-1}$
+    $FeCl_3$ 和2) 0.1 $\rm mol\cdot^{-1}$ $K_3[Fe(CN)_6]$ 溶
+    液的小试管中加入几滴 0.5 $\rm mol\cdot L^{-1}$
+    $KSCN$ 溶液，观察现象。\qquad\qquad\quad \linebreak  
+    两种化合物中都有 $Fe(III)$,为什么实
+    验结果不同？ 
+    &1)溶液变为血红色；2)溶液颜色无变化
+    & 1) $ Fe^{3+}+3SCN^- \to  Fe(SCN)_3$；
+    2) 虽然两种化合物中都有三价铁离子，但是后者生成了络合物，铁离子与$(CN)^-$的结合能力比$SCN^-$更强\\
+    \hline
+\end{tabular}
+\normalsize
+\medskip
+
+（2）$Fe^{2+}$与$[Fe(CN)_6]^{4+}$的性质的比较
+
+\fontsize{10pt}{12pt}\selectfont
+\renewcommand\arraystretch{1}
+\noindent
+\begin{tabular}{|m{6cm}|m{3cm}|m{6cm}|}
+    \hline
+    \makecell{\textbf{实验步骤}} & \makecell{\textbf{实验现象}} & \makecell{\textbf{现象解释及方程式}} \\
+    \hline
+    分别两支盛有1) 0.5 mL 0.1 $\rm mol\cdot L^{-1}$硫
+    酸亚铁铵溶液和2) 0.1 $\rm mol\cdot L^{-1}$
+    $K_4[Fe(CN)_6]$ 溶液的小试管中加入
+    几滴0.5 $\rm mol\cdot L^{-1}$ $Na_2S$ 溶液，是否都
+    有$FeS$ 沉淀生成？为什么？
+    & 1)生成黑色沉淀；\linebreak 2)不发生变化
+    & 1) $Fe^{2+}+S^{2-}\to FeS\downarrow$；2) $Fe^{2+}$与$(CN)^-$的结合能力比$S^{2-}$更强，不生成硫化亚铁沉淀\\
+    \hline
+\end{tabular}
+\normalsize
+\medskip
+
+（3）简单离子的性质
+
+\fontsize{10pt}{12pt}\selectfont
+\renewcommand\arraystretch{1}
+\noindent
+\begin{tabular}{|m{6cm}|m{3cm}|m{6cm}|}
+    \hline
+    \makecell{\textbf{实验步骤}} & \makecell{\textbf{实验现象}} & \makecell{\textbf{现象解释及方程式}} \\
+    \hline
+    取少量明矾$[K_2SO_4 Al_2(SO_4)_3\cdot 24H_2O]$
+    晶体放入试管里，用蒸馏水溶解，
+    分装三支试管，分别用1)
+            $Na_3[Co(NO_2)_6]$、 2) $NaOH$、 3)
+    $BaCl_2$ 溶液检出其中的 $K^+$、 $Al^{3+}$和
+    $SO_4^{2-}$ 。
+    & 1)生成黄色沉淀；\linebreak
+    2)先生成白色絮状沉淀，后沉淀溶解；\linebreak
+    3)生成白色沉淀
+    & $2K^++Na^++[Co(NO_2)_6]^{3-} \to K_2Na[Co(NO_2)_6]\downarrow$；\qquad\qquad\qquad \,\linebreak
+    $Al^{3+}+3OH^- \to Al(OH)_3\downarrow$；\qquad\qquad\,\linebreak
+    $Al(OH)_3+OH^-\to Al(OH)_4^-$；\qquad\,\linebreak
+    $Ba^{2+}+SO_4^{2-}\to BaSO_4\downarrow$
+    \\
+    \hline
+\end{tabular}
+\normalsize
+\medskip
+
+\noindent\textbf{小结：}
+
+金属离子形成配合物后，其性质会发生改变，比如颜色、溶解度等。同时，配合物和复盐不一样，
+复盐的组成离子（包括金属离子）都能够电离出来，并展现其性质，但是配合物中的金属离子没有被电离出来，表现的是配离子的性质。
+
+这些都表明，配离子和简单离子的性质在许多方面都具有极大的不同，利用这些不同点，可以判断某种物质是否为配合物。
+
+\subsection*{3.配离子稳定性的比较}
+
+\fontsize{10pt}{12pt}\selectfont
+\renewcommand\arraystretch{1}
+\noindent
+\begin{tabular}{|m{6cm}|m{3cm}|m{5.5cm}|}
+    \hline
+    \makecell{\textbf{实验步骤}} & \makecell{\textbf{实验现象}} & \makecell{\textbf{现象解释及方程式}} \\
+    \hline
+    1) 向小试管中加入 0.5 mL 0.5 $\rm mol\cdot L^{-1}$ $Fe_2 (SO_4)_3$ 溶液，然后逐滴加入6 $\rm mol\cdot L^{-1}$ $HCl$ 溶液。观察溶液颜色的变化。
+    & 1) 溶液变为黄色
+    & 1) $Fe^{3+}+6Cl^-\to[FeCl_6]^{3-}$
+    \\
+    2 ) 再 往 溶 液 中 加 1 滴 0.01 $\rm mol\cdot L^{-1}$ $NH_4SCN$ 溶液，溶液颜色有何变化？
+    & 2) 溶液变为血红色
+    & 2) $[FeCl_6]^{3-}+SCN^-\to Cl^- + [Fe(SCN)_n]^{(3-n)}$
+    \\
+    3) 再往溶液中滴加适量的 $10\% NH_4F$ 溶液（加至溶液颜色完全褪为无色）。
+    & 3) 溶液变为无色
+    & 3) $[Fe(SCN)_n]^{(3-n)}+F^-\to SCN^- + [FeF_6]^{3-}$
+    \\
+    4) 最 后 溶 液 中 加 几 滴 饱 和$(NH_4)_2C_2O_4$ 溶液，溶液颜色有何变化？
+    & 4) 溶液变为绿色
+    & 4) $[FeF_6]^{3-} + C_2O_4^{2-}\to F^- + [Fe(C_2O_4)_3]^{3-}$
+    \\
+    \hline
+    在0.5 mL 碘水中，逐滴加入0.1 $\rm mol\cdot L^{-1}$ $K_4[Fe(CN)_6]$ 溶液， 振荡。
+    比较$\varphi_{Fe^{3+}/Fe^{2+}}$与$\varphi_{[Fe(CN)_6]^{3-}/[Fe(CN)_6]^{4-}}$大小，并比较$[Fe(CN)_6]^{3-}$和$[Fe(CN)_6]^{4-}$稳 定 性
+    & 溶液由棕黄逐渐变为黄色
+    & $[Fe(CN)_6]^{4-} + I_2 \to [Fe(CN)_6]^{3-} + I^-$，据相关资料，$\varphi_{Fe^{3+}/Fe^{2+}}$=0.771V，
+    $\varphi_{[Fe(CN)_6]^{3-}/[Fe(CN)_6]^{4-}}$=0.36V，$[Fe(CN)_6]^{4-}$的$log\,\beta_4$=35，$[Fe(CN)_6]^{3-}$的$log\,\beta_4$=42，后者更加稳定。
+    \\
+    \hline
+\end{tabular}
+\normalsize
+\medskip
+
+\noindent\textbf{小结：}
+
+不同的络合离子的稳定性不一样，$K_{\text{稳}}$也不一样，稳定性顺序（由小到大）：
+$$
+[FeCl_6]^{3-},\quad [Fe(SCN)_n]^{(3-n)},\quad [FeF_6]^{3-},\quad [Fe(C_2O_4)_3]^{3-}
+$$
+
+在金属离子变成络合离子后，其氧化性也会发生变化。
+
+\subsection*{4.酸碱平衡与配位平衡}
+
+\fontsize{10pt}{12pt}\selectfont
+\renewcommand\arraystretch{1}
+\noindent
+\begin{tabular}{|m{6cm}|m{3cm}|m{5.5cm}|}
+    \hline
+    \makecell{\textbf{实验步骤}} & \makecell{\textbf{实验现象}} & \makecell{\textbf{现象解释及方程式}} \\
+    \hline
+    1) 向0.5 mL 0.2 $\rm mol\cdot L^{-1}$ $CuSO_4$溶液中逐滴加入 2 $\rm mol\cdot L^{-1}$ $NH_3\cdot H_2O$，振荡，直到最初生成的浅蓝色沉淀溶解为止，观察溶液颜色。
+    & 1)沉淀溶解之后，溶液为深蓝色
+    & 1)$Cu^{2+}+4NH_3=[Cu(NH_3)_4]^{2+}$
+    \\
+    2) 再向溶液中逐滴加入 1 $\rm mol\cdot L^{-1}$ $H_2SO_4$ 溶液，溶液的颜色有何变化？是否有沉淀生成？ 
+    & 2)溶液变浅，逐渐生成浅蓝色絮状沉淀
+    & 2)$[Cu(NH_3)_4](OH)_2 + 4H^+=Cu(OH)_2\downarrow + 4NH_4^+$
+    \\
+    3) 继续加入$H_2SO_4$ 到溶液显酸性又有什么变化？
+    & 3)沉淀溶解，变为蓝色溶液
+    & 3)$Cu(OH)_2+2H^+=Cu^{2+}+2H_2O$
+    \\
+    \hline
+    1) 向2滴 0.1 $\rm mol\cdot L^{-1}$ $Fe_2(SO_4)_3$ 溶液中 加 入 10 滴 饱 和 $(NH_4)_2C_2O_4$ 溶液，溶液颜色有何变化？生成了什么？
+    & 1)溶液由黄色变为翠绿色
+    & 1)$Fe^{3+}+3C_2O_4^{2-}=[Fe(C_2O_4)_3]^{3-}$
+    \\
+    2) 加入1滴0.5 $\rm mol\cdot L^{-1}$ $NH_4SCN$ 溶液，溶液颜色有无变化？
+    & 2)溶液颜色没有变化
+    & 2)没有干扰到配合物内界
+    \\
+    3) 再 向 溶 液 中 逐 滴 加 入 6 $\rm mol\cdot L^{-1}$ $HCl$，溶液颜色又有何变化？写出有关的反应式。
+    & 3)溶液颜色变红
+    & 3)$2H^++C_2O_4^{2-}=H_2C_2O_4$ ;\qquad \quad \linebreak
+    $Fe^{3-}+SCN^-\to [Fe(SCN)_n]^{(3-n)}$
+    \\
+    \hline
+\end{tabular}
+
+\noindent
+\begin{tabular}{|m{6cm}|m{3cm}|m{5.5cm}|}
+    \hline
+    向0.5 mL $Na_3[Co(NO_2)_6]$ 溶液中逐滴加入 6 $\rm mol\cdot L^{-1}$ $NaOH$ 溶液，并振荡试管，观察$[Co(NO_2)_6]^{3-}$ 被破坏和$Co(OH)_3$沉淀的生成。
+    & 产生棕褐色沉淀
+    & $[Co(NO_2)_6]^{3-}+3OH^-= 6NO_2^- + Co(OH)_3\downarrow$
+    \\
+    \hline
+\end{tabular}
+\normalsize
+\medskip
+
+\noindent\textbf{小结：}
+
+酸碱平衡能够影响到配位平衡，这具体是通过氢离子或者氢氧根离子与配离子内界的某些部分发生反应而发挥作用的，能够破坏原有的络合物离子。
+所以可以使用酸碱平衡来控制配合物的生成与解离，将原来的配离子转化为金属离子、其他种类的配合物（甚至是稳定性降低的）、沉淀等，
+这样可以改变其氧化性等化学性质\textsuperscript{\cite{NKDZ200603010}}。
+
+\subsection*{5.沉淀平衡与配位平衡}
+
+\fontsize{10pt}{12pt}\selectfont
+\renewcommand\arraystretch{1}
+\noindent
+\begin{tabular}{|m{6cm}|m{3cm}|m{5.5cm}|}
+    \hline
+    \makecell{\textbf{实验步骤}} & \makecell{\textbf{实验现象}} & \makecell{\textbf{现象解释及方程式}} \\
+    \hline
+    1) 向0.5 mL 0.2 $\rm mol\cdot L^{-1}$ $CuSO_4$溶液中逐滴加入2 $\rm mol\cdot L^{-1}$1 $NH_3\cdot H_2O$，振荡试管至生成的浅蓝色沉淀溶解为止。
+    & 1)沉淀溶解之后，溶液为深蓝色
+    & 1)$Cu^{2+}+4NH_3=[Cu(NH_3)_4]^{2+}$
+    \\
+    2) 向溶液中逐滴加入$Na_2S$ 溶液，是否有沉淀生成？
+    & 2)生成黑褐色沉淀
+    & 2)$[Cu(NH_3)_4]^{2+}+S^{2-}=CuS\downarrow+4NH_3$
+    \\
+    \hline
+    1) 向离心管中加入 0.5 mL $\rm mol\cdot L^{-1}$ $AgNO_3$ 溶液和 0.5 mL $\rm mol\cdot L^{-1}$ $NaCl$ 溶液，离心分离，弃去清液。用蒸馏水洗涤沉淀两次.
+    & 1)产生白色沉淀
+    & 1)$Ag^+ + Cl^-=AgCl\downarrow$
+    \\
+    2) 然后加入 2 $\rm mol\cdot L^{-1}$ $NH_3\cdot H_2O$ 至沉淀刚好溶解为止。向溶液中加1滴 0.1 $\rm mol\cdot L^{-1}$ $NaCl$ 溶液，是否有$AgCl$ 沉淀生成？
+    & 2)没有沉淀生成
+    & 2)$AgCl + 2NH_3\cdot H_2O = 2H_2O + Cl^- + [Ag(NH_3)_2]^+$
+    \\
+    3) 再加入 1 滴 0.1 $\rm mol\cdot L^{-1}$ $KBr$ 溶液，有无 $AgBr$ 沉淀生成？沉淀是什么颜色？
+    & 3)生成浅黄色沉淀
+    & 3)$[Ag(NH_3)_2]^+ + Br^- = AgBr\downarrow + 2NH_3$
+    \\
+    4) 继续加入$KBr$溶液，至不再产生$AgBr$沉淀为止。离心分离，弃去清液，并用少量蒸馏水把沉淀洗涤两次.
+    & 4)无
+    & 4)无
+    \\
+    5) 然后加入 0.5 $\rm mol\cdot L^{-1}$ $Na_2S_2O_3$ 溶液,直到沉淀刚好溶解为止。向溶液中加 1 滴 $\rm mol\cdot L^{-1}$ $KBr$ 溶液，是否有 $AgBr$ 沉淀生成？
+    & 5)不生成$AgBr$沉淀
+    & 5)$AgBr + 2S_2O_3^{2-} = Br^- + [Ag(S_2O_3)_2]^{3-}$
+    \\
+    6) 再加1 滴0.1 $\rm mol\cdot L^{-1}$ $KI$ 溶液，有没有$AgI$ 沉淀产生？
+    & 6)生成黄色沉淀
+    & 6)$[Ag(S_2O_3)_2]^{3-} + I^- = AgI\downarrow + 2S_2O_3^{2-}$
+    \\
+    \hline
+\end{tabular}
+\normalsize
+\medskip
+
+由以上实验，讨论沉淀平衡与配位平衡的相互影响，并比较$AgCl$、$AgBr$、$AgI$的$K_{sp}$的大小和$[Ag(NH_3)_2]^+$ 、$[Ag(S_2O_3)_2]^{3-}$的$K_{\text{稳}}$的大小。
+
+根据以上实验，沉淀平衡与配位平衡之间存在相互影响，总是会生成更加稳定的物质，这通常能够溶解沉淀或者破坏配合物。
+
+$AgCl$、$AgBr$、$AgI$的$K_{sp}$的大小顺序（由大到小）为：$AgCl$、$AgBr$、$AgI$；
+$[Ag(NH_3)_2]^+$和$[Ag(S_2O_3)_2]^{3-}$的$K_{\text{稳}}$的大小顺序（由大到小）为：$[Ag(S_2O_3)_2]^{3-}$、$[Ag(NH_3)_2]^+$
+
+\subsection*{6.氧化还原平衡与配位平衡}
+
+\fontsize{10pt}{12pt}\selectfont
+\renewcommand\arraystretch{1}
+\noindent
+\begin{tabular}{|m{6cm}|m{3cm}|m{5.5cm}|}
+    \hline
+    \makecell{\textbf{实验步骤}} & \makecell{\textbf{实验现象}} & \makecell{\textbf{现象解释及方程式}} \\
+    \hline
+    1) 向 5 滴 0.1 $\rm mol\cdot L^{-1}$ $KI$ 溶液中加入5 滴0.1 $\rm mol\cdot L^{-1}$ $FeCl_3$ 溶液，振荡试管，观察溶液颜色的变化，发生了什么反应？
+    & 1)溶液由无色变成棕黄色
+    & 1)$2Fe^{3+}+2I^-=2Fe^{2+}+I_2$
+    \\
+    2)再向溶液中逐滴加入饱和$(NH_4)_2C_2O_4$ 溶液，溶液颜色又有什么变化？又发生了什么反应？
+    & 2)溶液变为浅绿色
+    & 2)$Fe^{2+}+C_2O_4^{2-}+I_2\to I^- + [Fe(C_2O_4)_3]^{3-}$
+    \\
+    写出反应式，并讨论配位平衡对氧化还原平衡的影响。& & \\
+    \hline
+\end{tabular}
+\normalsize
+\medskip
+
+\noindent\textbf{小结：}
+
+金属离子生成的配合物越稳定，配离子的解离度就越小，溶液中游离的该种金属离子的浓度就越低，因而金属离子形成配离子之后，还原能力增强，氧化能力变弱，
+也就是本来能够把碘离子氧化为碘单质，现在却被碘单质氧化，使得原来的氧化还原平衡向着反方向移动，表明配位平衡能够影响氧化还原稳定性\textsuperscript{\cite{SHAA200303029}}。
+
+\subsection*{7.配位解离平衡的移动}
+
+\fontsize{10pt}{12pt}\selectfont
+\renewcommand\arraystretch{1}
+\noindent
+\begin{tabular}{|m{6cm}|m{3cm}|m{5.5cm}|}
+    \hline
+    \makecell{\textbf{实验步骤}} & \makecell{\textbf{实验现象}} & \makecell{\textbf{现象解释及方程式}} \\
+    \hline
+    在5 mL 0.5 $\rm mol\cdot L^{-1}$ $CuSO_4$中加入适量6 $\rm mol\cdot L^{-1}$ $NH_3\cdot H_2O$，至沉淀完全溶解为止，
+    得到$[Cu(NH_3)_4]^{2+}$溶液。将溶液一分为四，利用不同反应破坏$[Cu(NH_3)_4]^{2+}$：
+    &
+    &
+    \\
+    a. 酸碱反应：加入1 $\rm mol\cdot L^{-1}$ $HCl$
+    & a.生成浅蓝色沉淀后溶解
+    & a.$[Cu(NH_3)_4]^{2+}+4HCl=CuCl_2+4NH_4^+$
+    \\
+    b. 沉淀反应：加入 $Na_2S$溶液
+    & b.生成黑褐色沉淀
+    & b.$[Cu(NH_3)_4]^{2+}+S^{2-} \to CuS\downarrow + NH_4^+$
+    \\
+    c. 氧化还原反应：加入$Zn$片（早做，静置，最后观察$Zn$片变化）
+    & c.蓝色变浅，析出紫红色物质
+    & c.$[Cu(NH_3)_4]^{2+}+Zn=Cu + [Zn(NH_3)_4]^{2+}$
+    \\
+    d. 生成更稳定配合物：加入数滴0.1 $\rm mol\cdot L^{-1}$ $EDTA$溶液
+    & d.蓝色变浅
+    & d.$[Cu(NH_3)_4]^{2+}+EDTA = 2NH_3+[Cu(EDTA)]^{2+}$
+    \\
+    \hline
+\end{tabular}
+\normalsize
+\medskip
+
+\noindent\textbf{小结：}
+
+利用酸碱反应、沉淀反应、氧化还原反应或者生成更加稳定的配合物等能够将原来的配合物转化为其他更加稳定的物质，从而使配位平衡发生移动。
+
+\subsection*{8.配合物的某些应用}
+
+\fontsize{10pt}{12pt}\selectfont
+\renewcommand\arraystretch{1}
+\noindent
+\begin{tabular}{|m{6cm}|m{3cm}|m{5.5cm}|}
+    \hline
+    \makecell{\textbf{实验步骤}} & \makecell{\textbf{实验现象}} & \makecell{\textbf{现象解释及方程式}} \\
+    \hline
+    \textbf{利用生成有色配合物来鉴定某些离子：}
+    在白色点滴板上加入$Ni^{2+}$试液（0.1 $\rm mol\cdot L^{-1}$$NiSO_4$）、6$\rm mol\cdot L^{-1}$氨水
+    和 1\%二乙酰二肟溶液(秋加耶夫试剂)各 1 滴，有鲜红色沉淀生成， 表示有$Ni^{2+}$存在。
+    & 加入氨水之后溶液变为蓝色，加入二乙酰二肟溶液后产生鲜红色沉淀。
+    & $Ni^{2+}+4NH_3=[Ni(NH_3)_4]^{2+}$ \linebreak
+    $Ni^{2+}+\text{二乙酰二肟} \to [Ni(\text{二乙酰二肟})]^{2+}$
+    \\
+    \hline
+    \textbf{利用生成配合物掩蔽干扰离子：}
+    各取 1 滴0.1 $\rm mol\cdot L^{-1}$ $CoCl_2$和$FeCl_3$溶液于小试管中，加 8$\sim $10滴饱和$NH_4SCN$溶液，有何现象？\qquad\quad\qquad\quad\qquad\quad \;\linebreak
+    逐滴加入 2 $\rm mol\cdot L^{-1}$$NH_4F$溶液， 并摇动试管，有何现象？继续滴加至溶液变为淡红色（$Co^{2+}$的颜色）；\qquad\quad \;\linebreak
+    然后加 6 滴戊醇，振荡试管、静置、观察戊醇层的颜色。
+    & 加入$NH_4SCN$溶液后变成血红色溶液，加入$NH_4F$溶液后褪色，呈淡红色，加入戊醇后，有机相为深蓝色。
+    & $Fe^{3+}+SCN^-\to [Fe(SCN)_n]^{3-n}$\linebreak
+    $Co^{2+}+4SCN^- = [Co(SCN)_4]^{2-}$\linebreak
+    $[Fe(SCN)_n]^{3-n}+F^-\to SCN^- + [FeF_6]^{3-}$因而血红色褪去，加入戊醇后，$[Co(SCN)_4]^{2-}$被萃取，使得有机相为深蓝色。
+    \\
+    \hline
+\end{tabular}
+\normalsize
+\medskip
+
+\noindent\textbf{小结：}
+
+利用配合物的相关反应，能够做到鉴别某些金属离子（如$Ni^{2+}$离子\textsuperscript{\cite{ZGBZ202319041}}），还能够将干扰检测的离子变成配合物从而掩蔽干扰离子。
+这表明配合物的相关反应在化学分析中具有重要的作用。
+
+\section*{三、问题与思考}
+
+\noindent \textbf{1.} $KSCN$溶液检查不出$K_3[Fe(CN)_6]$溶液中的$Fe_{3+}$； $Na_2S$溶液不能与$K_4[Fe(CN)_6]$溶液中的$Fe^{2+}$反应生成$FeS$沉淀，
+这是否表明这两种配合物的溶液中不存在$Fe^{3+}$和$Fe^{2+}$？
+为什么$Na_2S$溶液不能使$K_4[Fe(CN)_6]$溶液产生$FeS$沉淀，而饱和$H_2S$溶液能使铜氨配合物的溶液产生$CuS$沉淀？
+
+不能够表明这两种配合物的溶液中不存在$Fe^{3+}$和$Fe^{2+}$，这只能说明其主要存在形式为原有的配离子，新的配离子$[Fe(SCN)_n]^{3-n}$和沉淀$FeS$的稳定性较弱；
+
+配离子之所以能够被转化，是因为配合物的生成与解离是一个化学平衡，其他反应就有可能和配合物的生成反应争夺金属离子，
+所以能不能产生沉淀，取决于配合物的稳定常数和沉淀的溶度积。
+
+\noindent \textbf{2.} 已知$[Ag(S_2O_3)_2]^{3-}$比$[Ag(NH_3)_2]^+$稳定，如果把$Na_2S_2O_3$溶液加到$[Ag(NH_3)_2]^+$溶液中，会发生什么变化？
+
+由于$[Ag(S_2O_3)_2]^{3-}$比$[Ag(NH_3)_2]^+$稳定，所以$[Ag(NH_3)_2]^+$会变成$[Ag(S_2O_3)_2]^{3-}$。
+
+
+\noindent \textbf{3.} 设计一实验方案，确证光卤石$KMgCl_3\cdot 6H_2O$是复盐而不是配合物。
+
+复盐和配合物的区别在于，前者的各种离子均可以店里出来，但后者不可以，因此仅需检验光卤石水溶液中钾离子、镁离子、氯离子的存在即可。
+具体来说，使用$Na_3[Co(NO_2)_6]$来检验钾离子，用$NaOH$来检验镁离子，用$AgNO_3$来检验氯离子。
+
+\noindent \textbf{4.} 衣服上沾有铁锈时，可用草酸洗去，试说明原理？
+
+作为一种弱酸，草酸可以与铁锈反应，另外，草酸解离出来的$C_2O_4^{2-}$可以与铁离子形成溶于水的配离子
+（若添加草酸钾可以提供更多的草酸根），从而洗去铁锈。
+
+\noindent \textbf{5.} 在印染液中，常因某些离子（如$Fe^{3+}$、$Cu^{2+}$等）使染料颜色改变，加入$EDTA$便可纠正此弊。试说明原理。
+
+$EDTA$能够与$Fe^{3+}$、$Cu^{2+}$等形成极其稳定的配合物，从而避免染料颜色改变。同样，还可以用来除去重金属离子\textsuperscript{\cite{NYBH20241011002}}。
+
+
+\noindent \textbf{6.} 在检出卤素离子混合物中的$Cl^-$时，用 2$\rm mol\cdot L^{-1}$$NH_3\cdot H_2O$处理卤化银沉淀；
+处理后所得的氨溶液用$HNO_3$酸化得白色沉淀，或在氨水处理液中加入$KBr$溶液得黄色沉淀，这两种现象都可以证明$Cl^-$的存在。为什么？
+
+前者：有$Cl^-$存在时，加入$NH_3\cdot H_2O$处理卤化银沉淀可以得到$[Ag(NH_3)_2]^+$配离子，
+加入硝酸酸化之后，就可以转化为$AgCl$沉淀，所以能够证明$Cl^-$的存在。
+
+后者：加入$KBr$溶液得黄色沉淀表明氨水处理液中含有$[Ag(NH_3)_2]^+$配离子，而仅在$Cl^-$存在时，
+加入$NH_3\cdot H_2O$处理卤化银沉淀可以得到$[Ag(NH_3)_2]^+$配离子，因而也证明了$Cl^-$的存在。
+
+\bibliographystyle{IEEEtran}
+\bibliography{data_10}
+
+
+\end{document}

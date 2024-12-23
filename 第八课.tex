@@ -1,0 +1,241 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{geometry} %设置边距，符合Word设定
+\geometry{a4paper, top=2.5cm, bottom=2.5cm, left=2.5cm, right=2.5cm}
+\usepackage{amsmath} %数学公式排版
+\usepackage{lmodern} %使用Latin Modern字体
+\usepackage{multirow} %单元格合并
+\usepackage{makecell} %优化单元格显示
+\usepackage{tabularx} %Latex的表格
+\usepackage{xeCJK} %排版中日韩（CJK）文字
+\usepackage{fontspec} %提供了一个自动和统一的接口来加载字体，\setmainfont用于设置主字体
+\usepackage{ctex} %中文支持
+\usepackage{cite} %文献引用
+\usepackage[version=4]{mhchem} %排版化学公式和方程式
+\usepackage{chemfig} %排版化学结构式
+\setchemfig{atom sep=1.9em}
+\usepackage{xcolor} %在文档中为文字等添加颜色（中心原子Mg绘制成了红色）
+
+\setmainfont{Times New Roman}
+
+% 导言区
+\title{\heiti\zihao{2} 实验：水硬度的测定}
+\author{专业名称\quad 姓\;名\quad 学号xxxxxxxxxxxxxx}
+\date{20xx年xx月xx日}
+
+%设置小四号字号，字号为12pt，行距为18pt
+\renewcommand{\normalsize}{\fontsize{12pt}{18pt}\selectfont}
+%文件开始
+\begin{document}
+
+\maketitle
+
+\section*{一、实验原理与操作方法}
+\subsection*{（一）实验原理}
+
+水的硬度指的是水中可溶性钙盐和镁盐的含量，如果二者含量高，水称之为硬水，反之为软水。因此水硬度的测定可以分为总硬度和钙、镁硬度。
+在测定时，钙、镁硬度分别用1L水中对应CaO和MgO的质量来表示，而总硬度则是将MgO转化为等摩尔数的CaO，然后计算全部的CaO的质量，总硬度和钙、镁硬度的单位均是mg/L。
+
+使用络合滴定法可以测量出水中钙离子和镁离子的总浓度，将其转化为等摩尔数的CaO便可以求出总硬度。
+如果用NaOH调节水样至pH=12，此时$\rm Mg^{2+}$会成为$\rm Mg(OH)_2$沉淀，然后进行络合滴定可以测出水样中钙离子的浓度，从而可以得到钙镁离子各自的浓度，并能够计算出钙、镁硬度。
+
+实验中使用到了三种物质：EDTA，钙指示剂和铬黑T，其结构式如下：
+
+\bigskip
+\scriptsize
+\chemname{\chemfig{OH-[:60](=[::60]O)-[::-60]-[::-60]N(-[::-60]-[::60](=[::60]O)-[::-60]Na^{+}O^{-})-[::60]-[::60]-[::-60]N(-[::60]
+-[::60](=[::60]O)-[::-60]O^{-}Na^{+})-[::-60]-[::60](=[::-60]O)-[::60]OH}}{EDTA}
+\quad
+\chemname{\chemfig{[:-90]*6(-=-=-*6(-(-N=N-*6(-*6(-=-=-)=-(-[:30]S(=[::20]O)(=[::100]O)-[::-60]ONa)=-(-HO)=))=(-OH)-=-=-))}}{钙指示剂}
+\quad
+\chemname{\chemfig{[:-90]*6(-=(-O_{2}N)-=-*6(-(-N=N-*6(-=-=-(-HO)=))=(-O^{-})-=(-^{-}O_{3}S)-=-))}}{铬黑T}
+\normalsize
+\medskip
+
+从结构式上容易看出，三者都是多齿配体，都易于与金属离子形成络合物，
+并且，后两者具有颜色，还能有明显的颜色变化。在氨缓冲溶液（$\rm pH\approx 10$）中，指示剂铬黑T先与$\rm Ca^{2+}$、$\rm Mg^{2+}$配位，形成酒红色的配合物，然后用EDTA标准溶液滴定
+游离的$\rm Ca^{2+}$、$\rm Mg^{2+}$，当达到滴定终点时，EDTA将已与铬黑T配位的$\rm Ca^{2+}$、$\rm Mg^{2+}$夺取过来，从而使得铬黑T完全游离出来，
+此时溶液由酒红色突变为游离铬黑T本身的纯蓝色\textsuperscript{\cite{SSCG202408002}}。
+
+测量钙硬度的原理与测量总硬度类似，基于总硬度和钙硬度可以计算得到镁硬度。在测定之前，需要使用$\rm CaCO_3$配置的标准溶液对所用的EDTA溶液进行标定，其原理与前面相同。
+
+\subsection*{（二）操作方法}
+(1)配置EDTA溶液：使用台秤称取0.8 g EDTA二钠盐，用纯水溶解至溶液体积约为400毫升，转移到试剂瓶中。
+
+(2)Mg-EDTA溶液：已配制的公用试剂，直接取用。
+
+(3)配置钙离子溶液：减量法准确称取$\rm 0.05\sim0.06gCaCO_3$基准物，加5-10滴纯水润湿，然后加入5-6滴（1+1）HCl溶液，盖上表面皿使其完全溶解。
+加入纯水20mL，在电热板上加热约2分钟，冷却后定容至100mL。
+
+(4)移取上述溶液 25.00 mL于锥形瓶中，加 50 mL纯水、3 mL Mg-EDTA溶液，从滴定管0刻度起加入约15 mL EDTA待标定溶液；
+加入10 mL氨性缓冲溶液及“一平勺”固体铬黑T指示剂，接着用EDTA溶液继续滴定至由紫红刚变为纯蓝色，记录滴定体积，平行滴定三次。
+
+(5)测定自来水样中的$\rm Ca^{2+}$：取100mL水样，加入2-3ml2mol/L的NaOH溶液以去除镁离子，后加入一满勺钙指示剂，
+用EDTA溶液滴定至由酒红色刚变为纯蓝色，记录滴定体积，平行测定三次，并计算$\rm Ca^{2+}$的含量。
+
+(6)测定自来水样中的$\rm Ca^{2+}$和$\rm Mg^{2+}$的总量：取100mL水样，加 3 mL Mg-EDTA溶液和5 mL pH$\rm \approx$10的氨性缓冲溶液及“一平勺”固体铬黑T指示剂，
+用EDTA溶液滴定至由紫红色刚变为纯蓝色，记录滴定体积，平行测定三次，计算出钙镁离子总含量和$\rm Mg^{2+}$的含量。
+
+\subsection*{（三）实验中待记录的数据}
+实验中共进行了9次滴定，需要记录下这9次滴定所消耗的EDTA溶液体积和锥形瓶中液体的体积，还需要记录碳酸钙基准物的质量、钙离子溶液定容体积。
+
+由于计算式涉及到$\rm CaCO_3$、$\rm CaO$和$\rm MgO$的摩尔质量，查课本附录有：
+$$
+\rm CaCO_3\quad 100.09g/mol\quad ;\quad CaO\quad 56.08g/mol \quad ;\quad MgO\quad 40.30g/mol
+$$
+
+\subsection*{（四）部分化学反应方程式}
+
+\schemestart
+    \chemname{\chemfig{OH-[:60](=[::60]O)-[::-60]-[::-60]N(-[::-60]-[::60](=[::60]O)-[::-60]Na^{+}O^{-})-[::60]-[::60]-[::-60]N(-[::60]
+    -[::60](=[::60]O)-[::-60]O^{-}Na^{+})-[::-60]-[::60](=[::-60]O)-[::60]OH}}{EDTA(\text{无色})}
+    \arrow{->[$\rm Mg^{2+}$][]}
+    \chemname{\chemfig[cram width=2pt]{{\color{red}Mg^{2+}}?[a]-[:90,1.8,,,red,dashed]O^{-}-[:150](=[:110]O)-[5]-[:-70]N?[a,1,red,dashed](-[:30]-[:0](=[:30]O)
+    -[:-30]O^{-}?[a,1,red,dashed])-[:185]<[:255,0.8]-[:-5,,,,line width=2pt]N?[a,1,red,dashed]
+    (-[:-105]-[:-45](=[:-105]O)-[:20]O^{-}?[a,1,red,dashed])<[7]-[,,,,line width=2pt](=[:-30]O)>[:30]O^{-}?[a,1,red,dashed]}}{Mg-EDTA(\text{无色})}
+\schemestop
+\bigskip
+
+\footnotesize
+\schemestart
+    \chemname{\chemfig{[:-90]*6(-=(-O_{2}N)-=-*6(-(-N=N-*6(-=-=-(-HO)=))=(-O^{-})-=(-^{-}O_{3}S)-=-))}}{$\rm HIn^{2-}$(\text{蓝色})}
+    \arrow{->[$\rm Mg^{2+}$][]}
+    \chemname{\chemfig{[:-90]*6(-=(-O_{2}N)-=-*6(-(-N=N-*6(-=-=-(-O?[a])=))=(-O-[::-45,1.6]Mg?[a])-=(-^{-}O_{3}S)-=-))}}{$\rm MgIn^{-}$(\text{红色})}
+\schemestop
+\normalsize
+\bigskip
+
+\footnotesize
+\schemestart
+    \chemname{\chemfig{[:-90]*6(-=-=-*6(-(-N=N-*6(-*6(-=-=-)=-(-[:30]S(=[::20]O)(=[::100]O)-[::-60]ONa)=-(-HO)=))=(-OH)-=-=-))}}{钙指示剂(\text{蓝色})}
+    \arrow{->[$\rm Ca^{2+}$][]}
+    \chemname{\chemfig{[:-90]*6(-=-=-*6(-(-N=N-*6(-*6(-=-=-)=-(-[:30]S(=[::20]O)(=[::100]O)-[::-60]ONa)=-(-O?)=))=(-O-[::-45,1.6]Ca?)-=-=-))}}{Ca-钙指示剂(\text{红色})}
+\schemestop
+\normalsize
+\bigskip
+
+\subsection*{（五）测定、标定的计算式}
+测定以及标定的计算式如下：
+$$
+\frac{25mL}{100mL}\cdot \frac{m(\text{基准物})}{M(\text{基准物})}=V(EDTA)\cdot C(EDTA)\quad ; \quad \overline{C}(EDTA)=\frac{1}{3}\sum C(EDTA)
+$$$$
+V(\text{总,EDTA})\cdot \overline{C}(EDTA) = \frac{\text{总硬度}}{M(CaO)}\cdot V(\text{水样}) \quad ; \quad {\text{总硬度平均值}}=\frac{1}{3}\sum \text{总硬度}
+$$$$
+V(\text{1,EDTA})\cdot \overline{C}(EDTA) = \frac{\text{钙硬度}}{M(CaO)}\cdot V(\text{水样}) \quad ; \quad {\text{钙硬度平均值}}=\frac{1}{3}\sum \text{钙硬度}
+$$
+
+$$
+\frac{\text{总硬度平均值}}{M(CaO)} = \frac{\text{钙硬度平均值}}{M(CaO)} + \frac{\text{镁硬度平均值}}{M(MgO)}
+$$
+
+
+\section*{二、结果与讨论}
+\subsection*{原始数据记录表}
+\renewcommand\arraystretch{1.5}
+\fontsize{10pt}{12pt}\selectfont
+\noindent
+\begin{tabularx}{13cm}{|p{0.5cm}|p{0.5cm}|p{6cm}|p{2cm}|p{2cm}|p{2cm}|}
+    \cline{1-6}
+    \multirow{9}{*}{\makecell{标\\ \\ \\ \\ \\定}}
+        & \multicolumn{2}{c|}{基准物名称} & \multicolumn{3}{c|}{碳酸钙$\rm CaCO_3$} \\
+        \cline{2-6}
+        & \multicolumn{2}{c|}{$\rm m_{\text{基准物}}/g$} & \multicolumn{3}{c|}{0.0593} \\
+        \cline{2-6}
+        & \multicolumn{2}{c|}{定容体积/mL} & \multicolumn{3}{c|}{100} \\
+        \cline{2-6}
+        & \multicolumn{2}{c|}{移取体积/mL} & \makecell{25.00} & \makecell{25.00} & \makecell{25.00} \\
+        \cline{2-6}
+        & \multicolumn{2}{c|}{$\rm V_{EDTA}/mL$} & \makecell{26.85} & \makecell{26.89} & \makecell{26.86} \\
+        \cline{2-6}
+        & \multicolumn{2}{c|}{$\rm C_{EDTA}/mol\cdot L^{-1}$} & \makecell{$\rm 5.516\times 10^{-3}$} & \makecell{$\rm 5.508\times 10^{-3}$} & \makecell{$\rm 5.514\times 10^{-3}$} \\
+        \cline{2-6}
+        & \multicolumn{2}{c|}{EDTA浓度平均值/$\rm mol\cdot L^{-1}$} & \multicolumn{3}{c|}{$\rm 5.513\times 10^{-3}$} \\
+        \cline{2-6}
+        & \multicolumn{2}{c|}{相对偏差/\%} & \makecell{0.06} & \makecell{-0.09} & \makecell{0.019} \\
+        \cline{2-6}
+        & \multicolumn{2}{c|}{平均相对偏差/\%} & \multicolumn{3}{c|}{0.06} \\
+    \cline{1-6}
+    \multirow{12}{*}{\makecell{测\\ \\ \\ \\ \\ \\ \\ \\定}}
+        & \multirow{6}{*}{\makecell{总\\ 硬\\ 度\\ 测\\ 定}}
+            & \makecell{$\rm V_{\text{水样}}/mL$} & \makecell{100} & \makecell{100} & \makecell{100} \\
+            \cline{3-6}
+            & & \makecell{$\rm V_{\text{总,EDTA}}/mL$} & \makecell{10.99} & \makecell{10.88} & \makecell{10.72} \\
+            \cline{3-6}
+            & & \makecell{总硬度（$\rm CaO\; mg\cdot L^{-1}$）} & \makecell{33.98} & \makecell{33.64} & \makecell{33.14} \\
+            \cline{3-6}
+            & & \makecell{总硬度（$\rm CaO\; mg\cdot L^{-1}$）平均值} & \multicolumn{3}{c|}{33.58} \\
+            \cline{3-6}
+            & & \makecell{相对偏差/\%} & \makecell{1.2} & \makecell{0.18} & \makecell{-1.3} \\
+            \cline{3-6}
+            & & \makecell{平均相对偏差/\%} & \multicolumn{3}{c|}{0.9} \\
+        \cline{2-6}
+        & \multirow{6}{*}{\makecell{钙\\ 硬\\ 度\\ 测\\ 定}}
+            & \makecell{$\rm V_{\text{水样}}/mL$} & \makecell{100} & \makecell{100} & \makecell{100} \\
+            \cline{3-6}
+            & & \makecell{$\rm V_{\text{1,EDTA}}/mL$} & \makecell{8.60} & \makecell{8.64} & \makecell{8.62} \\
+            \cline{3-6}
+            & & \makecell{钙硬度（$\rm CaO\; mg\cdot L^{-1}$）} & \makecell{26.59} & \makecell{26.71} & \makecell{26.65} \\
+            \cline{3-6}
+            & & \makecell{钙硬度（$\rm CaO\; mg\cdot L^{-1}$）平均值} & \multicolumn{3}{c|}{26.65} \\
+            \cline{3-6}
+            & & \makecell{相对偏差/\%} & \makecell{-0.22} & \makecell{0.22} & \makecell{0} \\
+            \cline{3-6}
+            & & \makecell{平均相对偏差/\%} & \multicolumn{3}{c|}{0.15} \\
+    \cline{1-6}
+\end{tabularx}
+\normalsize
+\medskip
+
+经过计算，总硬度（$\rm CaO\; mg\cdot L^{-1}$）平均值为33.58$\rm mg\cdot L^{-1}$，钙硬度（$\rm CaO\; mg\cdot L^{-1}$）平均值为26.65$\rm mg\cdot L^{-1}$，则可以计算出镁硬度为：
+$$
+\rm \text{镁硬度}=(\frac{33.58}{56.08}-\frac{26.65}{56.08})\times 40.30 mg\cdot L^{-1}=4.98 mg\cdot L^{-1}
+$$
+
+\section*{三、实验分析与总结}
+\subsection*{（一）、实验分析}
+本次实验一共有9次滴定，前3次滴定为标定部分，后6次滴定为测定部分。根据实验结果，可以发现厦门大学翔安校区的自来水硬度低，属于软水，符合华南地区的水质特征。
+
+由于水质偏软，使得滴定时所用溶液体积偏小，最终导致滴定的误差偏大，并有可能放大读数误差，应当调整EDTA溶液的浓度。
+另外，查阅文献得知铬黑T指示剂和钙指示剂均不稳定\textsuperscript{\cite{GZHA201418029}}\textsuperscript{\cite{SDHG200907005}}，这样会导致颜色变化不明显，从而产生误差。
+
+\subsection*{（二）、实验改进}
+(1)可以将EDTA溶液进行稀释，使其浓度变为原来的一半，从而增加滴定体积，减小误差。
+
+(2)铬黑Ｔ盐酸羟胺溶于三乙醇胺乙醇配制溶液，该体系下溶液的稳定性较强，可以保证颜色变化明显\textsuperscript{\cite{SDHG200907005}}。
+
+(3)构建钙指示剂－三乙醇胺－无水乙醇－吐温－80液体钙指示剂体系，以增强钙指示剂的稳定性，保证颜色变化明显\textsuperscript{\cite{GZHA201418029}}。
+
+\section*{四、思考题}
+
+(1)用$\rm CaCO_3$基准物质标定EDTA或水样中$\rm Mg^{2+}$含量较少而进行$\rm Ca^{2+}$、$\rm Mg^{2+}$总量的滴定（用铬黑T为指示剂）时，
+为什么滴定前需加入Mg-EDTA溶液？为什么配制Mg-EDTA溶液时，两者量的比例一定要恰好1:1？
+
+因为铬黑T与钙离子形成的络合物不如与镁离子形成的络合物稳定，当水样中$\rm Mg^{2+}$含量较低时，显色灵敏度较低，所以可在滴定前加入一定量的Mg-EDTA溶液，
+Mg-EDTA与$\rm Ca^{2+}$发生反应生成Ca-EDTA的同时置换出$\rm Mg^{2+}$，$\rm Mg^{2+}$与铬黑T形成的红色络合物可以提高显色灵敏度。
+
+而配制Mg-EDTA溶液时，两者量的比例一定要恰好1:1，这是为了避免因为加入Mg-EDTA溶液而造成误差，不增加EDTA的滴定体积。
+
+
+(2)$\rm Ca^{2+}$、$\rm Mg^{2+}$与EDTA的配合物哪个更稳定？为什么滴定$\rm Mg^{2+}$时要控制pH=10，而滴定$\rm Ca^{2+}$时则需pH=12？
+
+$\rm Ca^{2+}$与EDTA的配合物更稳定，因为钙离子半径更大，更容易被极化，和EDTA的配位能力更强，而且钙离子的配位数通常更大。
+
+在滴定$\rm Ca^{2+}$时需要去除$\rm Mg^{2+}$，调节pH=12，可以将镁离子转化为氢氧化镁沉淀，从而便于测定钙离子浓度；
+而测定$\rm Mg^{2+}$时，是通过总浓度间接计算的，控制pH=10是因为铬黑T最适宜的pH值为6.5$\rm \sim$11.5，这可以提高显色灵敏度。
+
+
+(3)用$\rm Ca^{2+}$标准溶液标定EDTA及测定水的硬度时，通常要求加入氨性缓冲溶液后立即滴定，为什么？
+用$\rm Ca^{2+}$标定EDTA时，加入氨性缓冲溶液前，要先加入一部分EDTA溶液，为什么？
+
+因为铬黑T最适宜的pH值为6.5$\rm \sim$11.5，而且铬黑T易变质，加入氨性缓冲溶液后立即滴定，可以有效减少铬黑T的分解，保证显色灵敏度。
+
+因为铬黑T易变质，先加入一部分EDTA溶液可以减少滴定时间，从而避免铬黑T快速变质。
+
+
+(4)测定钙硬度中,若pH>13.5时,将会产生什么结果?
+
+若pH>13.5，大多数钙离子被沉淀，导致钙硬度偏小，镁硬度偏大。
+
+\bibliographystyle{IEEEtran}
+\bibliography{data_8}
+
+\end{document}
