@@ -4,7 +4,7 @@
 
 首先你需要配置好TeX的环境，可以在国内镜像网站上面下载TeXlive，然后在VScode上面配置环境。
 
-![image-20241216160348883](https://github.com/YthinXMU/YthinXMU-The-experiment-reports-for-inorganic-and-analytical-chemistry-experiments/edit/main/picture/2024-12-16 160316.png)
+![image-20241216160348883](picture/2024-12-16%20160316.png)
 
 另外，也可以使用overleaf，这是一款强大的在线Latex编辑器，非常好用。
 
